@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen</title>
+    <style>
+      Body {
+        max-width: 600px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>El nostre examen d'HTML</h1>
+    </header>
+    <nav>
+      <a href="#introduccio">Introducció</a>
+      <a href="#formulari">Formulari</a>
+      <a href="#finalitzacio">Finalització</a>
+    </nav>
+    <main>
+      <section id="introduccio">
+        <h2>Secció 1:Introducció</h2>
+        <p>
+          Aquest és el primer examen de l'assignatura Llenguatges de marques i
+          sistemes de gestió de la informació. Realitzarem únicament l'HTML i
+          incorporarem els estils donats, però NO afegirem cap estil que no
+          s'hagi lliurat. Aquesta part valdrà un 60% de la nota.
+        </p>
+      </section>
+      <section id="formulari">
+        <h2>Secció 2:Formulari</h2>
+        <form>
+          <label for="assignatura">Assignatura</label>
+          <input type="text" id="assignatura" name="assignatura" required />
+
+          <label for="alumne">Nom de l'alumne/alumna</label>
+          <input type="text" id="alumne" name="alumne" required />
+
+          <label for="correu">Correu electrònic</label>
+          <input type="email" id="correu" name="correu" required />
+
+          <label for="activitats">Activitats lliurades</label>
+          <select name="activitats" id="activitats" multiple>
+            <option value="0">Cap</option>
+            <option value="1">Activitat 1</option>
+            <option value="2">Activitat 2</option>
+            <option value="3">Activitat 3</option>
+            <option value="4">Activitat 4</option>
+          </select>
+
+          <label for="nota">Nota</label>
+          <input
+            type="number"
+            id="nota"
+            name="nota"
+            value
+            min="0"
+            value
+            max="10"
+            required
+          />
+
+          <label for="comentaris">Comentaris</label>
+          <textarea
+            name="comentaris"
+            id="comentaris"
+            rows="6"
+            cols="40"
+          ></textarea>
+
+          <button>Enviar</button>
+        </form>
+      </section>
+      <section id="finalitzacio">
+        <h2>Secció 3:Finalització</h2>
+        <p>
+          Un cop finalitzades les dues parts lliurables de l'examen, es
+          corregirà i lliurarà la nota via Gestib, el més ràpid possible. Molta
+          sort!”
+        </p>
+      </section>
+    </main>
+    <footer>
+      © 2024 El nostre examen d'HTML | Contacte: abergas@nigul.cide.es
+    </footer>
+  </body>
+</html>

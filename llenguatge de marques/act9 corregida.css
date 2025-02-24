@@ -1,0 +1,51 @@
+/* Estils generals */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Marges externs */
+#divEsquerra,
+#divDreta,
+#divCentral {
+    margin-top: 20px; /* Espai en blanc entre els blocs i els límits del navegador */
+    border: 1px dashed black; /* Línia puntejada per delimitar els blocs */
+    padding: 10px; /* Espai intern dins dels blocs */
+}
+
+/* Bloc del costat esquerre */
+#divEsquerra {
+    float: left; /* Col·loca el bloc a l'esquerra */
+    margin-left: 20px; /* Espai en blanc a l'esquerra */
+    width: 20%; /* Amplada del bloc esquerre */
+    box-sizing: border-box; /* Inclou el padding i el border dins del width */
+}
+
+/* Bloc del costat dret */
+#divDreta {
+    float: right; /* Col·loca el bloc a la dreta */
+    margin-right: 20px; /* Espai en blanc a la dreta */
+    width: 20%; /* Amplada del bloc dret */
+    box-sizing: border-box; /* Inclou el padding i el border dins del width */
+}
+
+/* Bloc central */
+#divCentral {
+    margin: 0 auto; /* Centra el bloc central */
+    width: 55%; /* Amplada del bloc central */
+    text-align: right; /* Text alineat a la dreta */
+    overflow: hidden; /* Assegura que el contingut no desbordi */
+}
+
+/* Peu de pàgina */
+footer {
+    position: fixed; /* Peu fixat a la part inferior de la pàgina */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f4f4f4; /* Color de fons */
+    text-align: center;
+    padding: 10px 0; /* Espai intern */
+    border-top: 1px solid black; /* Línia divisòria superior */
+}

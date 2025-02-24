@@ -1,0 +1,82 @@
+--SELECTS (10 x 1 = 10 punts)
+
+--1. Retorna les dades (totes) de la nota més alta.
+SELECT * 
+FROM NOTA N
+ORDER BY NOTA DESC FETCH FIRST ROW ONLY;
+
+--2. Retorna el DNI i el correu electrònic dels alumnes amb un nom que acabi per "ra" i amb un primer llinatge que comenci per "Mar” , ordenant per DNI ascendent.
+--Columnes: DNI, correu electrònic
+--Ordenació: DNI ascendent
+SELECT DNI, EMAIL
+FROM ALUMNE A
+WHERE NOM LIKE '%ra' AND LLINATGE1 LIKE 'Mar%'
+ORDER BY DNI ASC;
+
+--3. Retorna el DNI i el nom complet (nom i llinatges) del professor que cobra MÉS.
+--Columnes: DNI, nom complet
+SELECT DNI, NOM ||' '|| LLINATGE1 ||' '|| LLINATGE2 AS NOM_COMPLET
+FROM PROFESSOR P
+ORDER BY SALARI DESC FETCH FIRST ROW ONLY;
+
+--4. Retorna la mitjana de notes per ID d'assignatura ordenant per nota promig descendent.
+--Columnes: ID d'assignatura, nota mitjana
+--Ordenació: nota mitjana descendent
+SELECT A.ID, AVG(nota) AS MITJANA
+FROM NOTA N
+JOIN ASSIGNATURA A ON N.ID_ASSIGNATURA = A.ID
+GROUP BY A.ID
+ORDER BY MITJANA DESC;
+
+--5. Retorna informació de les notes (DNI alumne, convocatòria, nota) de l'assignatura "Estructura de computadors".
+--Columnes: DNI alumne, convocatòria, nota
+SELECT DNI_ALUMNE, CONVOCATORIA, NOTA
+FROM NOTA N
+JOIN ASSIGNATURA A ON N.ID_ASSIGNATURA = A.ID
+WHERE A.NOM = 'Estructura de computadors';
+
+--6. Retorna les dades dels alumnes (NOMÉS dels alumnes) que NO tenen cap nota, ordenant els resultats alfabèticament seguint la següent prioritat: primer llinatge, segon llinatge, nom.
+--Columnes: totes les d'alumnes
+--Ordenació: alfabèticament segons la prioritat indicada: 1r llinatge, 2n llinatge, nom
+SELECT DNI, NOM, LLINATGE1, LLINATGE2, EMAIL
+FROM ALUMNE A
+LEFT JOIN NOTA N ON N.DNI_ALUMNE = A.DNI
+WHERE N.NOTA IS NULL
+ORDER BY LLINATGE1, LLINATGE2, NOM;
+
+--7. Retorna el nombre d'assignatures per cada grau (nom), ordenant pel nombre d'assignatures, del grau que en té més al que en té menys.
+--Columnes: Nom grau, nombre d'assignatures
+--Ordenació: Nombre d'assignatures, de més a menys
+SELECT G.NOM, COUNT(*)
+FROM ASSIGNATURA A
+JOIN GRAU G ON A.ID_GRAU = G.ID
+--Era algo amb WHERE COUNT(*) IS NOT NULL PERO NS COM PERQUE ME DONA FALLO
+GROUP BY G.NOM
+ORDER BY COUNT(*) DESC;
+
+--8. Retorna informació de totes les notes (dni alumne, convocatòria, nota) juntament amb la informació de l'assignatura (nom, pla) i grau (nom) corresponent.
+--Columnes: DNI alumne, any de convocatòria, nota, nom de l'assignatura, pla de l'assignatura, nom del grau.
+SELECT DNI_ALUMNE, CONVOCATORIA, NOTA, A.NOM, A.PLA, G.NOM AS NOM_1
+FROM NOTA N
+JOIN ASSIGNATURA A ON N.ID_ASSIGNATURA = A.ID
+JOIN GRAU G ON A.ID_GRAU = G.ID;
+
+--9. Retorna la nota mitjana de cada assignatura del grau "Informàtica", ordenant de menys nota a més.
+--Columnes: nom de l'assignatura, nota mitjana
+--Ordenació: nota mitjana, de menys a més
+SELECT A.NOM, AVG(NOTA) AS MITJANA
+FROM NOTA N
+JOIN ASSIGNATURA A ON N.ID_ASSIGNATURA = A.ID
+JOIN GRAU G ON A.ID_GRAU = G.ID
+WHERE G.NOM = 'Informàtica'
+GROUP BY A.NOM
+ORDER BY MITJANA ASC;
+
+--10.Retorna el salari combinat (sumat) de dels professors de cada grau. Si un grau no té assignatures o professors assignats a les seves assignatures, ha de sortir un 0.
+--Columnes: Nom grau, salari total professors
+SELECT G.NOM, SUM(SALARI)
+FROM PROFESSOR P
+FULL JOIN ASSIGNATURA A ON A.DNI_PROFESSOR = P.DNI
+FULL JOIN GRAU G ON G.ID = A.ID_GRAU
+GROUP BY G.NOM
+ORDER BY G.NOM;

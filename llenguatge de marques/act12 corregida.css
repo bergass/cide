@@ -1,0 +1,45 @@
+/* Estils per a la secció de novetats */
+.novetats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnes iguals */
+    grid-gap: 20px; /* Espai entre elements */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.producte {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Transició per l'efecte hover */
+}
+
+.producte:hover {
+    transform: scale(1.05); /* Efecte de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producte img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.producte h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.producte p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Estils per als darrers dos productes */
+.producte.extra {
+    grid-column: span 2; /* Ocupa dues columnes */
+}

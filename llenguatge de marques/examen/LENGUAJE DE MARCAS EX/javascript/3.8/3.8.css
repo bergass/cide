@@ -1,0 +1,121 @@
+/* estils per a la seccio de novetats */
+.novetats {
+    display: grid; /* usar grid para el diseño */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnes iguals */
+    grid-gap: 20px; /* espai entre elements */
+    padding: 20px; /* relleno interno */
+    box-sizing: border-box; /* incluir borde y relleno en el tamaño total */
+}
+
+.producte {
+    border: 1px solid #ccc; /* borde del producto */
+    border-radius: 5px; /* bordes redondeados */
+    padding: 15px; /* relleno interno */
+    text-align: center; /* alinear texto al centro */
+    transition: transform 0.3s ease; /* transicio per l'efecte hover */
+}
+
+.producte:hover {
+    transform: scale(1.05); /* efecte de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra de la caja */
+}
+
+.producte img {
+    max-width: 100%; /* ancho maximo del 100% */
+    height: auto; /* altura automatica */
+    border-radius: 5px; /* bordes redondeados */
+    margin-bottom: 10px; /* margen inferior */
+}
+
+.producte h3 {
+    margin: 10px 0; /* margen superior e inferior */
+    font-size: 18px; /* tamaño de la fuente */
+    color: #333; /* color del texto */
+}
+
+.producte p {
+    margin: 5px 0; /* margen superior e inferior */
+    color: #666; /* color del texto */
+    font-size: 14px; /* tamaño de la fuente */
+}
+
+/* estils per als darrers dos productes */
+.producte.extra {
+    grid-column: span 2; /* ocupa dues columnes */
+}
+
+/* estils per al nav */
+nav {
+    background-color: #333; /* color de fondo */
+    padding: 10px 0; /* relleno interno */
+}
+
+nav ul {
+    list-style: none; /* sin estilo de lista */
+    display: flex; /* usar flexbox para el diseño */
+    justify-content: center; /* centrar horizontalmente */
+    margin: 0; /* sin margen */
+    padding: 0; /* sin relleno */
+}
+
+nav ul li {
+    margin: 0 15px; /* margen entre elementos */
+}
+
+nav ul li a {
+    text-decoration: none; /* sin subrayado */
+    color: #fff; /* color del texto */
+    font-weight: bold; /* texto en negrita */
+    transition: color 0.3s ease; /* transicion suave del color */
+}
+
+nav ul li a:hover {
+    color: #f4a261; /* color del texto al pasar el raton */
+}
+
+/* estils per al formulari de contacte */
+form {
+    max-width: 600px; /* ancho maximo */
+    margin: 0 auto; /* centrar horizontalmente */
+    padding: 20px; /* relleno interno */
+    border: 1px solid #ccc; /* borde del formulario */
+    border-radius: 5px; /* bordes redondeados */
+    background-color: #f9f9f9; /* color de fondo */
+}
+
+form label {
+    display: block; /* mostrar como bloque */
+    margin-bottom: 5px; /* margen inferior */
+    font-weight: bold; /* texto en negrita */
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%; /* ancho completo */
+    padding: 10px; /* relleno interno */
+    margin-bottom: 10px; /* margen inferior */
+    border: 1px solid #ccc; /* borde del campo */
+    border-radius: 5px; /* bordes redondeados */
+}
+
+form button {
+    display: block; /* mostrar como bloque */
+    width: 100%; /* ancho completo */
+    padding: 10px; /* relleno interno */
+    background-color: #333; /* color de fondo */
+    color: #fff; /* color del texto */
+    border: none; /* sin borde */
+    border-radius: 5px; /* bordes redondeados */
+    font-size: 16px; /* tamaño de la fuente */
+    cursor: pointer; /* cursor de puntero */
+}
+
+form button:hover {
+    background-color: #f4a261; /* color de fondo al pasar el raton */
+}
+
+#missatge {
+    text-align: center; /* alinear texto al centro */
+    margin-top: 20px; /* margen superior */
+    font-size: 16px; /* tamaño de la fuente */
+}

@@ -1,0 +1,21 @@
+body {
+    font-size: 16px; /* tamaño de fuente del cuerpo */
+    color: rgb(0, 0, 0); /* color del texto del cuerpo */
+    font-family: Arial, sans-serif; /* familia de fuentes del cuerpo */
+}
+
+button {
+    margin: 5px; /* margen de los botones */
+    padding: 10px; /* relleno de los botones */
+    font-size: 16px; /* tamaño de fuente de los botones */
+}
+
+.novaClasse {
+    color: blue; /* color del texto de la clase 'novaClasse' */
+    font-weight: bold; /* peso de la fuente de la clase 'novaClasse' */
+}
+
+.classe44 {
+    color: red !important; /* color del texto de la clase 'classe44' */
+    font-weight: bold; /* peso de la fuente de la clase 'classe44' */
+}

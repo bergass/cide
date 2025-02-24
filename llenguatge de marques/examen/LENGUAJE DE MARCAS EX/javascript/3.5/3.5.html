@@ -1,0 +1,32 @@
+<!-- Afegeix JavaScript per detectar quan el botó del menú hamburguesa és clicat.
+Quan es cliqui el botó, el menú de navegació ha de desplegar-se si està ocult, o amagar-se si ja està visible.
+Afegeix també funcionalitat perquè, quan es cliqui qualsevol enllaç del menú o es torni a clicar el botó hamburguesa, el menú es torni a ocultar.
+Es pot modificar l'HTML i el CSS anteriors.-->
+
+<!DOCTYPE html>
+<html lang="ca"> <!-- inicio del documento html con el idioma catalan -->
+
+<head>
+    <meta charset="UTF-8"> <!-- configuracion de codificacion de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- configuracion para dispositivos moviles -->
+    <title>Tenda de Roba</title> <!-- titulo de la pagina -->
+    <link rel="stylesheet" href="3.5.css"> <!-- enlace al archivo css -->
+</head>
+
+<body>
+    <header class="barraNav"> <!-- inicio del encabezado con la clase barraNav -->
+        </div> <!-- cierre de un div innecesario -->
+        <nav class="menu" id="menuNav"> <!-- inicio de la navegacion con la clase menu y el id menuNav -->
+            <ul> <!-- inicio de la lista desordenada -->
+                <li><a href="#inici" onclick="inici()">Inici</a></li> <!-- enlace a la seccion inicio con un evento onclick -->
+                <li><a href="#productes" onclick="productes()">Productes</a></li> <!-- enlace a la seccion productos con un evento onclick -->
+                <li><a href="#qui-som" onclick="quiSom()">Qui Som?</a></li> <!-- enlace a la seccion quien somos con un evento onclick -->
+                <li><a href="#contacte" onclick="contacte()">Contacte</a></li> <!-- enlace a la seccion contacto con un evento onclick -->
+            </ul> <!-- cierre de la lista desordenada -->
+        </nav> <!-- cierre de la navegacion -->
+        <div id="menuH" onclick="menuHamburguesa()">&#9776;</div> <!-- boton del menu hamburguesa con un evento onclick -->
+    </header> <!-- cierre del encabezado -->
+    <script src="3.5.js"></script> <!-- enlace al archivo javascript -->
+</body>
+
+</html> <!-- cierre del documento html -->

@@ -1,0 +1,16 @@
+body {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.classe44 {
+    color: red !important;
+    font-weight: bold;
+}

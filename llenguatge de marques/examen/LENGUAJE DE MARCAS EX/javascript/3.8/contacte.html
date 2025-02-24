@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ca"> <!-- inicio del documento html con el idioma catalan -->
+
+<head>
+    <meta charset="UTF-8"> <!-- configuracion de codificacion de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- configuracion para dispositivos moviles -->
+    <title>Contacte</title> <!-- titulo de la pagina -->
+    <link rel="stylesheet" href="3.8.css"> <!-- enlace al archivo css -->
+</head>
+
+<body>
+    <header>
+        <h1>Llibres & Co</h1> <!-- titulo principal -->
+        <h2>Contacte</h2> <!-- subtitulo -->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inici</a></li> <!-- enlace a la pagina de inicio -->
+            <li><a href="cataleg.html">Catàleg</a></li> <!-- enlace a la pagina de catalogo -->
+            <li><a href="equip.html">El nostre equip</a></li> <!-- enlace a la pagina de equipo -->
+            <li><a href="novetats.html">Novetats</a></li> <!-- enlace a la pagina de novedades -->
+            <li><a href="contacte.html">Contacte</a></li> <!-- enlace a la pagina de contacto -->
+        </ul>
+    </nav>
+    <main>
+        <h2>Contacte</h2> <!-- subtitulo de la seccion de contacto -->
+        <form id="contactForm">
+            <label for="nom">Nom:</label> <!-- etiqueta para el campo nombre -->
+            <input type="text" id="nom" name="nom"> <!-- campo de texto para el nombre -->
+            
+            <label for="email">Correu electrònic:</label> <!-- etiqueta para el campo correo electronico -->
+            <input type="text" id="email" name="email"> <!-- campo de texto para el correo electronico -->
+            
+            <label for="assumpte">Assumpte:</label> <!-- etiqueta para el campo asunto -->
+            <input type="text" id="assumpte" name="assumpte"> <!-- campo de texto para el asunto -->
+            
+            <label for="descripcio">Descripció:</label> <!-- etiqueta para el campo descripcion -->
+            <textarea id="descripcio" name="descripcio"></textarea> <!-- area de texto para la descripcion -->
+            
+            <button type="submit">Enviar</button> <!-- boton para enviar el formulario -->
+        </form>
+        <p id="missatge"></p> <!-- parrafo para mostrar mensajes -->
+    </main>
+    <script src="3.8.js"></script> <!-- enlace al archivo javascript -->
+</body>
+
+</html> <!-- cierre del documento html -->

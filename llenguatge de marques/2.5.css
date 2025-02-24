@@ -1,0 +1,30 @@
+* {
+    font-family: 'Roboto', Verdana, sans-serif;
+    background-color: #efeff0;
+}
+
+label {
+    color: #696969;
+}
+
+input {
+    width: 200px;
+}
+
+div {
+    margin: 5px;
+}
+
+main {
+    background-color: #b0f3f8;
+}
+
+#comentaris {
+    background-color: lightpink;
+}
+
+header div {
+    height: 50px;
+    text-align: center;
+    background: linear-gradient(to right, lightpink, aquamarine);
+}

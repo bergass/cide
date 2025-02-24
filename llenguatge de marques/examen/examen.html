@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="examen.css"> <!-- enlace al archivo css -->
+
+</head>
+<body>
+    <header>
+        <h1>Examen marques</h1>
+    </header>
+    <main>
+        <p id="mostrar">0</p>
+        <button id="verd">Comptar</button> <!-- boton para aumentar el tamaño de la fuente -->
+        <button class="cvermell" id="vermell" onclick="reiniciar()">Reiniciar</button> <!-- boton para disminuir el tamaño de la fuente -->
+        <h1>Afegir comentaris</h1>
+        <form id="comentaris">
+            
+            <label for="comentari">comentari:</label> <!-- etiqueta para el campo descripcion -->
+            <textarea id="comentari" name="comentari"></textarea> <!-- area de texto para la descripcion -->
+            
+            <button onclick="afegirComentari()">afegirComentari</button> <!-- boton para añadir un nuevo parrafo -->
+            <button onclick="suprimirComentari()">suprimirComentari</button> <!-- boton para eliminar el parrafo añadido -->            
+            <div></div>
+        </form>
+    </main>
+    <script src="examen.js"></script> <!-- enlace al archivo javascript -->
+
+</body>
+</html>

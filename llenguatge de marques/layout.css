@@ -1,0 +1,19 @@
+.contenidor {
+    color: white;
+}
+#padre {
+    float: left;
+}
+
+#contenidor1 {
+    background-color: red;
+    float: right;
+}
+#contenidor2 {
+    background-color: green;
+    float: inherit ;
+}
+#contenidor3 {
+    background-color: blue;
+    float: right;
+}

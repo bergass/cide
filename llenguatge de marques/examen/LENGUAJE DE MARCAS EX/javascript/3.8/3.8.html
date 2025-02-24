@@ -1,0 +1,67 @@
+<!--
+Crearem una nova pàgina de contacte perquè un usuari pugui, mitjançant un formulari, contactar amb la llibreria.
+Afegirem un formulari que contingui un camp per indicar el nom de l'usuari, el seu correu electrònic, un assumpte, un camp de descripció per indicar quina consulta vol fer i un botó d’enviar.
+S'han de realitzar les següents validacions i totes les validacions s'han de fer des de Javascript i per això s'ha d'incloure event.preventDefault() al principi de la nostra funció javascript de validació.
+El correu electrònic ha de tenir un format vàlid. Es pot controlar amb l'expressió regular " /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;"
+Tots els camps han de ser obligatoris (no s’ha de posar required en l’HTML, sino controlar al JS). 
+No s’ha d’enviar el formulari fins que totes les comprovacions siguin correctes.
+Les validaciones es farán en prémer el botó d'enviar.
+Si totes les validacions són correctes i es fa l'enviament del formulari, s’ha de mostrar un missatge indicant que "El formulari s'ha enviat correctament."
+Si no són correctes s’ha d’indicar el motiu.-->
+
+<!DOCTYPE html>
+<html lang="ca"> <!-- inicio del documento html con el idioma catalan -->
+
+<head>
+    <meta charset="UTF-8"> <!-- configuracion de codificacion de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- configuracion para dispositivos moviles -->
+    <title>Novetats</title> <!-- titulo de la pagina -->
+    <link rel="stylesheet" href="3.8.css"> <!-- enlace al archivo css -->
+</head>
+
+<body>
+    <header>
+        <h1>Llibres & Co</h1> <!-- titulo principal -->
+        <h2>Novetats</h2> <!-- subtitulo -->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inici</a></li> <!-- enlace a la pagina de inicio -->
+            <li><a href="cataleg.html">Catàleg</a></li> <!-- enlace a la pagina de catalogo -->
+            <li><a href="equip.html">El nostre equip</a></li> <!-- enlace a la pagina de equipo -->
+            <li><a href="novetats.html">Novetats</a></li> <!-- enlace a la pagina de novedades -->
+            <li><a href="contacte.html">Contacte</a></li> <!-- enlace a la pagina de contacto -->
+        </ul>
+    </nav>
+    <main>
+        <h2>Novetats</h2> <!-- subtitulo de la seccion de novedades -->
+        <section class="novetats"> <!-- inicio de la seccion de novedades -->
+            <article class="producte"> <!-- inicio del articulo de producto -->
+                <img src="img/llibre1.jpg" alt="Llibre 1"> <!-- imagen del producto 1 -->
+                <h3>Llibre 1</h3> <!-- titulo del producto 1 -->
+                <p>Autor: Autor 1</p> <!-- autor del producto 1 -->
+                <p>Preu: 15€</p> <!-- precio del producto 1 -->
+            </article> <!-- cierre del articulo de producto -->
+            <article class="producte"> <!-- inicio del articulo de producto -->
+                <img src="img/llibre2.jpg" alt="Llibre 2"> <!-- imagen del producto 2 -->
+                <h3>Llibre 2</h3> <!-- titulo del producto 2 -->
+                <p>Autor: Autor 2</p> <!-- autor del producto 2 -->
+                <p>Preu: 20€</p> <!-- precio del producto 2 -->
+            </article> <!-- cierre del articulo de producto -->
+            <article class="producte"> <!-- inicio del articulo de producto -->
+                <img src="img/llibre3.jpg" alt="Llibre 3"> <!-- imagen del producto 3 -->
+                <h3>Llibre 3</h3> <!-- titulo del producto 3 -->
+                <p>Autor: Autor 3</p> <!-- autor del producto 3 -->
+                <p>Preu: 12€</p> <!-- precio del producto 3 -->
+            </article> <!-- cierre del articulo de producto -->
+            <article class="producte"> <!-- inicio del articulo de producto -->
+                <img src="img/llibre4.jpg" alt="Llibre 4"> <!-- imagen del producto 4 -->
+                <h3>Llibre 4</h3> <!-- titulo del producto 4 -->
+                <p>Autor: Autor 4</p> <!-- autor del producto 4 -->
+                <p>Preu: 18€</p> <!-- precio del producto 4 -->
+            </article> <!-- cierre del articulo de producto -->
+        </section> <!-- cierre de la seccion de novedades -->
+    </main>
+</body>
+
+</html> <!-- cierre del documento html -->

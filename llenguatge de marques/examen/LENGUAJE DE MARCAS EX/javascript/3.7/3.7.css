@@ -1,0 +1,95 @@
+/* barra de navegacion */
+.barraNav {
+    display: flex; /* usar flexbox para el diseño */
+    align-items: center; /* alinear elementos verticalmente al centro */
+    justify-content: space-between; /* espacio entre elementos */
+    padding: 10px 20px; /* relleno interno */
+    background-color: #333; /* color de fondo */
+    color: #fff; /* color del texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* sombra de la caja */
+}
+
+.logo img {
+    max-height: 50px; /* altura maxima de la imagen */
+}
+
+.menu ul {
+    display: flex; /* usar flexbox para el diseño */
+    gap: 20px; /* espacio entre elementos */
+    list-style: none; /* sin estilo de lista */
+    margin: 0; /* sin margen */
+    padding: 0; /* sin relleno */
+}
+
+.menu ul li a {
+    text-decoration: none; /* sin subrayado */
+    color: #fff; /* color del texto */
+    font-weight: bold; /* texto en negrita */
+    transition: color 0.3s ease; /* transicion suave del color */
+}
+
+.menu ul li a:hover {
+    color: #f4a261; /* color del texto al pasar el raton */
+}
+
+.productes {
+    display: grid; /* usar grid para el diseño */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* columnas adaptables */
+    gap: 20px; /* espacio entre elementos */
+    padding: 20px; /* relleno interno */
+}
+
+.producte {
+    display: flex; /* usar flexbox para el diseño */
+    justify-content: center; /* centrar horizontalmente */
+    align-items: center; /* centrar verticalmente */
+}
+
+.producte img {
+    max-width: 100%; /* ancho maximo del 100% */
+    height: auto; /* altura automatica */
+    border-radius: 10px; /* bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra de la caja */
+    transition: transform 0.3s ease; /* transicion suave de la transformacion */
+}
+
+.producte img:hover {
+    transform: scale(1.05); /* agrandar imagen al pasar el raton */
+}
+
+.cerca input {
+    padding: 5px 10px; /* relleno interno */
+    border: none; /* sin borde */
+    border-radius: 3px; /* bordes redondeados */
+    font-size: 16px; /* tamaño de la fuente */
+}
+
+.cerca input:focus {
+    outline: 2px solid #f4a261; /* borde al enfocar */
+}
+
+#menuH {
+    display: none; /* no mostrar por defecto */
+    cursor: pointer; /* cursor de puntero */
+    font-size: 24px; /* tamaño de la fuente */
+}
+
+@media (max-width: 600px) {
+    .menu {
+        display: flex; /* usar flexbox para el diseño */
+        flex-direction: column; /* direccion de los elementos en columna */
+        transition: max-height 0.3s ease-out; /* transicion suave de la altura maxima */
+        overflow: hidden; /* ocultar contenido desbordado */
+        max-height: 0; /* altura maxima inicial */
+    }
+
+    .menu.mostrar {
+        display: flex; /* mostrar el menu */
+        max-height: 500px; /* altura maxima ajustable */
+    }
+
+    #menuH {
+        display: block; /* mostrar el boton del menu hamburguesa */
+        margin-left: auto; /* alinear el boton a la derecha */
+    }
+}

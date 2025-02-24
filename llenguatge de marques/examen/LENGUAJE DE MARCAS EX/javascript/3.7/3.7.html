@@ -1,0 +1,54 @@
+<!--Afegeix una nova secció de productes al main de l'HTML que contingui 4 div, amb un text descriptiu i una imatge de 4 samarretes. 
+Per exemple, samarreta de Pokemon i una imatge.
+Modifica el CSS per donar una mica de format als productes.
+Modifica el Javascript per donar funcionalitat al cercador y que pugui 
+cerca productes a la part del cliente. Segons es vagi escrivint al
+ cercador, s'ha d'anar filtrant els productes i només aparèixer els 
+ que vagin coincidint. Ajuda't de la funcionalitat document.querySelectorAll(selector).
+ forEach per cercar els elements que coincideixen. No cal validar el formulari ni fer cap submit,
+  es pot controlar amb Javascript.-->
+
+<!DOCTYPE html>
+<html lang="ca"> <!-- inicio del documento html con el idioma catalan -->
+
+<head>
+    <meta charset="UTF-8"> <!-- configuracion de codificacion de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- configuracion para dispositivos moviles -->
+    <title>Tenda de Roba</title> <!-- titulo de la pagina -->
+    <link rel="stylesheet" href="3.7.css"> <!-- enlace al archivo css -->
+</head>
+
+<body>
+    <header class="barraNav"> <!-- inicio del encabezado con la clase barraNav -->
+        </div> <!-- cierre de un div innecesario -->
+        <nav class="menu" id="menuNav"> <!-- inicio de la navegacion con la clase menu y el id menuNav -->
+            <ul> <!-- inicio de la lista desordenada -->
+                <li><a href="#inici" onclick="inici()">Inici</a></li> <!-- enlace a la seccion inicio con un evento onclick -->
+                <li><a href="#productes" onclick="productes()">Productes</a></li> <!-- enlace a la seccion productos con un evento onclick -->
+                <li><a href="#qui-som" onclick="quiSom()">Qui Som?</a></li> <!-- enlace a la seccion quien somos con un evento onclick -->
+                <li><a href="#contacte" onclick="contacte()">Contacte</a></li> <!-- enlace a la seccion contacto con un evento onclick -->
+            </ul> <!-- cierre de la lista desordenada -->
+        </nav> <!-- cierre de la navegacion -->
+        <div id="menuH" onclick="menuHamburguesa()">&#9776;</div> <!-- boton del menu hamburguesa con un evento onclick -->
+    </header> <!-- cierre del encabezado -->
+
+    <section id="productes" class="productes"> <!-- inicio de la seccion productes con la clase productes -->
+        <input type="text" id="cercador" placeholder="Cercar productes..."> <!-- campo de busqueda con un evento onkeyup -->
+        <div class="producte"> <!-- inicio del div producte -->
+            <img src="barsa.jpg" alt="Producte 1"> <!-- imagen del producto 1 -->
+        </div> <!-- cierre del div producte -->
+        <div class="producte"> <!-- inicio del div producte -->
+            <img src="mallorca.webp" alt="Producte 2"> <!-- imagen del producto 2 -->
+        </div> <!-- cierre del div producte -->
+        <div class="producte"> <!-- inicio del div producte -->
+            <img src="barsa.jpg" alt="Producte 3"> <!-- imagen del producto 3 -->
+        </div> <!-- cierre del div producte -->
+        <div class="producte"> <!-- inicio del div producte -->
+            <img src="mallorca.webp" alt="Producte 4"> <!-- imagen del producto 4 -->
+        </div> <!-- cierre del div producte -->
+    </section> <!-- cierre de la seccion productes -->
+
+    <script src="3.7.js"></script> <!-- enlace al archivo javascript -->
+</body>
+
+</html> <!-- cierre del documento html -->

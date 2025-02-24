@@ -1,0 +1,347 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+
+}
+
+main {
+    background-color: #1B1F3B;
+    color: #256EFF;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+header {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: #1B1F3B;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1B1F3B;
+    transition: all 0.3s ease;
+
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    color: #1B1F3B;
+    padding: 0;
+}
+
+header h3 {
+    padding-right: 40px;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+ul li img {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+#menu {
+    display: none;
+}
+
+#sobreNosaltres {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+
+#text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+#sobreNosaltres img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#sobreNosaltres ul {
+    max-width: 55%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sobreNosaltres ul li {
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+#serveis {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#serveis ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    padding: 0;
+}
+
+#serveis ul li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    padding: 20px;
+}
+
+#serveis ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#portafoli {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#portafoli ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    padding: 0;
+}
+
+#portafoli ul li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    padding: 20px;
+}
+
+#portafoli ul li h3 {
+    color: black;
+}
+
+#portafoli ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#contacte {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#contacte form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#contacte form input {
+    font-weight: bold;
+    color: #1B1F3B;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#contacte form button {
+    color: #256EFF;
+}
+
+#navegacio ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #1B1F3B;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: #1B1F3B;
+    margin: 70px;
+    padding: 0;
+    text-align: center;
+}
+
+footer h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+footer p {
+    text-align: center;
+    color: #1B1F3B;
+}
+
+#navegacio ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    margin: 10px;
+}
+
+#xarxessocials img {
+    max-width: 30px;
+    height: auto;
+}
+
+@media (min-width:768px) and (max-width: 1024px) {
+
+    nav {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        padding: 30px;
+    }
+
+    #text {
+        padding: 0;
+    }
+
+    #serveis ul li {
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem;
+    }
+
+    #portafoli ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
+    header h3 {
+        display: none;
+    }
+    #menu {
+        display: flex;
+        padding: 30px;
+    }
+
+    #sobreNosaltres {
+        flex-direction: column;
+    }
+
+    #text {
+        padding: 0;
+    }
+
+    #serveis {
+        flex-direction: column;
+    }
+
+    #serveis ul li {
+        flex-direction: column;
+    }
+
+    #portafoli ul {
+        flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+        footer ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Divide en dos columnas */
+            gap: 20px; /* Espacio entre elementos */
+        }
+    
+        footer {
+            font-size: 10px;
+        }
+
+        footer #logo img {
+            width: 100px;
+            height: auto;
+        }
+    
+        footer img {
+            width: 15px; 
+        }
+    }
+}

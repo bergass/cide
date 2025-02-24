@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="2.5.css" />
+  </head>
+  <body>
+    <header>
+        <h1>Registre de Videojocs</h1>
+        <div>Introdueix les teves dades per continuar amb el registre</div>
+    </header>
+    <main>
+      <form method="post">
+        <div>
+          <label for="nom">Nom</label>
+          <input id="nom" type="text" name="nom" required />
+        </div>
+        <div>
+          <label for="edat">Edat</label>
+          <input id="edat" type="text" name="edat" min="18" required />
+        </div>
+        <div>
+          <label for="Correu">Correu electrònic</label>
+          <input id="Correu" type="email" name="Correu" required />
+        </div>
+        <div>
+          <label for="contrasenya">Contrasenya</label>
+          <input
+            id="contrasenya"
+            type="text"
+            name="contrasenya"
+            minlength="6"
+            maxlength="12"
+            required
+          />
+        </div>
+        <div>
+          <label for="consola fav">Tria una/unes consola preferida</label>
+          <select id="consola fav" name="sel[]" multiple required>
+            <option>Nintendo Switch</option>
+            <option>PS5</option>
+            <option>Xbox Series X</option>
+            <option>Xbox Series S</option>
+            <option>Steam Deck</option>
+            <option>Altres</option>
+          </select>
+        </div>
+        <div>
+          <input type="checkbox" id="notificacions" name="notificacions" />
+          <label for="notificacions">Vull subscriure'm a les notificacions per correu electrònic</label>
+        </div>
+        <div>
+          <label for="comentaris">Comentaris:</label>
+          <textarea
+            id="comentaris"
+            name="comentaris"
+            rows="2"
+            cols="50"
+          ></textarea>
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+      </form>
+    </main>
+    <footer>
+        <p>La meva pàgina de Videojocs. Tots els drets reservats.</p>
+    </footer>
+  </body>
+</html>

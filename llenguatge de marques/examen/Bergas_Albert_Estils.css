@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /*font de la lletra de tot el body */
+}
+
+header {
+    border: 1px solid #1d9031; /* tamany tipus i color de vora */
+    width: 100%; /* l'amplada de la capçelera */
+}
+
+.navbar {
+    display: flex; /* es el tipus de caixa que empram, posant a l'esquerra o dreta segons l'ordre */
+    flex-direction: row; /* asigna la direccio del flexbox(en fila) */
+    flex-wrap: wrap; /* se tiene que poner pero no se porque */
+    align-items: center; /* alineacio al centre de la barra de navegacio */
+    justify-content: space-between; /* que cada element diferenciat dins la barra tengui separacio */
+    padding: 1px; /* el marge entre el text i la vora*/
+    color: #1d9031;/* el color de la lletra*/
+    width: 100%;/* ample de la barra de navegacio*/
+}
+
+.navbar .menu ul {
+    display: flex;/* el menu es situara a la dreta del titol, perque al html va despres */
+    gap: 50px;/* es la separacio entre uls del menu */
+    list-style: none;/* lleva la etiqueta que es posa si es una list */
+    padding: 10px;/* el marge entre el text i la vora*/
+
+}
+
+.navbar .menu ul li a {
+    text-decoration: none;/* no mostra el text subratllat que es com seria a un link "a" */
+    color: #1d9031; /* li posa el color verd a les lletres */
+}
+
+
+.navbar .menu ul li a:hover {
+    font-weight: bold;/* quan poses el cursor damunt ho posa en negreta */
+}
+
+
+footer {
+    position: fixed; /* el footer esta fixe */
+    bottom: 0;/* el footer se quedara abaix del tot sempre */
+    width: 100%;/* el footer ocupa tota l'amplada de la pagina */
+    background-color: #1d9031; /* color de fons es verd */
+    text-align: center;/* el text s'alinea al centre */
+    color: white;/* el color del text es blanc */
+}
+
+.titol {
+    display: flex; /* gracis al flexbox com va abans del titol i esta en linea sortira a la esquerra */
+    margin-left: 20px; /* Espai en blanc a l'esquerra */
+    width: 20%; /* Amplada del bloc esquerre */
+    text-align: center; /* el text esta alineat al centre */
+}

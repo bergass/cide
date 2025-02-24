@@ -1,0 +1,11 @@
+body {
+    font-size: 16px; /* tamaño de fuente del cuerpo */
+    color: black; /* color del texto del cuerpo */
+    font-family: Arial, sans-serif; /* familia de fuentes del cuerpo */
+}
+
+button {
+    margin: 5px; /* margen de los botones */
+    padding: 10px; /* relleno de los botones */
+    font-size: 16px; /* tamaño de fuente de los botones */
+}

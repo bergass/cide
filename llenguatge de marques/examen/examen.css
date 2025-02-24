@@ -1,0 +1,54 @@
+#verd {
+   background-color: green;
+}
+#vermell {
+   background-color: red;
+}
+
+form {
+    max-width: 600px; /* ancho maximo */
+    margin: 0 auto; /* centrar horizontalmente */
+    padding: 20px; /* relleno interno */
+    border: 1px solid #ccc; /* borde del formulario */
+    border-radius: 5px; /* bordes redondeados */
+    background-color: #f9f9f9; /* color de fondo */
+}
+
+form label {
+    display: block; /* mostrar como bloque */
+    margin-bottom: 5px; /* margen inferior */
+    font-weight: bold; /* texto en negrita */
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%; /* ancho completo */
+    padding: 10px; /* relleno interno */
+    margin-bottom: 10px; /* margen inferior */
+    border: 1px solid #ccc; /* borde del campo */
+    border-radius: 5px; /* bordes redondeados */
+}
+
+form button {
+    display: block; /* mostrar como bloque */
+    width: 100%; /* ancho completo */
+    padding: 10px; /* relleno interno */
+    background-color: #333; /* color de fondo */
+    color: #fff; /* color del texto */
+    border: none; /* sin borde */
+    border-radius: 5px; /* bordes redondeados */
+    font-size: 16px; /* tamaño de la fuente */
+    cursor: pointer; /* cursor de puntero */
+}
+
+form button:hover {
+    background-color: #f4a261; /* color de fondo al pasar el raton */
+}
+
+#vermell {
+    display: none;
+}
+.mostrar {
+    display: flex; /* mostrar el menu */
+    max-height: 500px; /* altura maxima ajustable */
+}
