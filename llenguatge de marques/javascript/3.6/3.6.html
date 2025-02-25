@@ -9,12 +9,12 @@
 <body>
     <h1>Llista de Tasques</h1>
     <input type="text" id="escriureTasca">
-    <button onclick="afegirTasca()">Afegir</button>
-    <button onclick="esborrarCompletades()">Esborrar Completades</button>
-    <div>
-        <button onclick="filtrarTasques('totes')">Totes</button>
-        <button onclick="filtrarTasques('actives')">Actives</button>
-        <button onclick="filtrarTasques('completades')">Completades</button>
+    <button onclick="afegirTasca()" id="afegir">Afegir</button>
+    <button onclick="esborrarCompletades()" id="esborrar">Esborrar Completades</button>
+    <div id="filtrarTasques">
+        <button onclick="filtrarTasques('totes')" id="totes">Totes</button>
+        <button onclick="filtrarTasques('actives')" id="actives">Actives</button>
+        <button onclick="filtrarTasques('completades')" id="completades">Completades</button>
     </div>
     <ul id="tasques"></ul>
     <script src="3.6.js"></script>
