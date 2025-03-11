@@ -10,13 +10,14 @@
     <h1>Llista de Tasques</h1>
     <input type="text" id="escriureTasca">
     <button onclick="afegirTasca()" id="afegir">Afegir</button>
-    <button onclick="esborrarCompletades()" id="esborrar">Esborrar Completades</button>
+    <button onclick="borrarCompletades()" id="borrarCompletades">Borrar les tasques completades</button>
+
     <div id="filtrarTasques">
-        <button onclick="filtrarTasques('totes')" id="totes">Totes</button>
-        <button onclick="filtrarTasques('actives')" id="actives">Actives</button>
-        <button onclick="filtrarTasques('completades')" id="completades">Completades</button>
+        <button onclick="filtrarTotes()" id="totes">Totes</button>
+        <button onclick="filtrarActives()" id="actives">Actives</button>
+        <button onclick="filtrarCompletades()" id="completades">Completades</button>
     </div>
-    <ul id="tasques"></ul>
+    <div id="tasques"></div>
     <script src="3.6.js"></script>
 </body>
 </html>

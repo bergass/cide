@@ -36,5 +36,5 @@ function afegir() {
 
 function xx() {
     var imatges = document.getElementById("imatges");
-    document.body.removeChild(imatges)
+    imatges.innerHTML = "";
 }
