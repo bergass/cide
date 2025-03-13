@@ -36,7 +36,7 @@ function afegirTasca() {
 function borrarCompletades() {
     var completades = document.querySelectorAll("#tasques .contenedor input[type='checkbox'] :checked");
     completades.forEach(function (check) {
-        check.parentElement.remove();
+        check.parentElement.remove();   
     });
 }
 

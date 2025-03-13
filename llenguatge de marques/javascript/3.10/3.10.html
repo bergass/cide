@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adivina el Número</title>
     <link rel="stylesheet" href="3.10.css">
 </head>
 
 <body>
     <header>
-        <h1>Adivina el numero</h1>
+        <h1>Adivina el Número</h1>
     </header>
     <main>
-        <h3 id="subtitol">Dificultat</h3>
-        <div id="divDificultat">
+        <div id="seccionInicial">
+            <h3 id="subtitolInicial">Selecciona un nivell</h3>
+            <label for="dificultat">Dificultat</label>
             <select id="dificultat" name="sel[]" required>
                 <option value="" disabled selected>Tria la dificultat</option>
                 <option value="1">1</option>
@@ -23,8 +24,13 @@
             </select>
             <button onclick="començar()" id="començar">Començar</button>
         </div>
-        <button onclick="volver()" id="volver">Volver</button>
-
+        <div id="seccionJoc" style="display: none;">
+            <h3 id="subtitolJoc"></h3>
+            <input type="number" id="input" placeholder="Introdueix un número">
+            <button onclick="comprovar()" id="comprovar">Comprovar</button>
+            <button onclick="reiniciar()" id="reiniciar">Reiniciar</button>
+            <p id="missatge"></p>
+        </div>
     </main>
     <script src="3.10.js"></script>
 </body>
