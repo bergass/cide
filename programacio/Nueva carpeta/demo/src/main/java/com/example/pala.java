@@ -1,41 +1,37 @@
-package com.example;
+package com.example; // Define el paquete de la clase
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*; // Importa las clases necesarias para gráficos
 
-import javax.swing.JPanel;
-import javax.swing.Timer;
+public class pala { // Define la clase pala
+    private int x, y; // Coordenadas de la pala
+    private final int width, height; // Ancho y alto de la pala
+    private final int speed = 10; // Velocidad de movimiento de la pala
 
-public class pala extends JPanel implements ActionListener {
-    private int x = 25, y = 30; // Coordenadas iniciales del círculo
-    private final int RETRASO = 10; // Retraso del temporizador en milisegundos
-    private Timer timer; // Temporizador para controlar la animación
-    private int dx = 4, dy = 4; // Velocidad del movimiento en X e Y
-
-
-    public pala() {
-        setBackground(Color.RED); // Define el color de fondo del panel
-        timer = new Timer(RETRASO, this); // Crea el temporizador con retraso especificado
-        timer.start(); // Inicia el temporizador
+    public pala(int x, int y, int width, int height) { // Constructor de la clase
+        this.x = x; // Inicializa la coordenada X
+        this.y = y; // Inicializa la coordenada Y
+        this.width = width; // Inicializa el ancho
+        this.height = height; // Inicializa el alto
     }
 
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g; // Conversión a Graphics2D para mejorar el dibujo
-        g2d.setColor(Color.RED); // Define el color del círculo
-        g2d.drawLine(x, y, x + 10, y + 40); // Dibuja el círculo en las coordenadas x, y con el radio
+    public void draw(Graphics g) { // Método para dibujar la pala
+        g.setColor(Color.WHITE); // Establece el color de la pala
+        g.fillRect(x, y, width, height); // Dibuja la pala como un rectángulo
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        // Comprueba si el círculo toca los bordes horizontales
-        // Actualiza la posición del círculo
-        x += dx;
-        y += dy;
-        repaint();
+    public void moveUp() { // Método para mover la pala hacia arriba
+        if (y > 0) { // Verifica si la pala no está en el borde superior
+            y -= speed; // Mueve la pala hacia arriba
+        }
+    }
+
+    public void moveDown(int panelHeight) { // Método para mover la pala hacia abajo
+        if (y < panelHeight - height) { // Verifica si la pala no está en el borde inferior
+            y += speed; // Mueve la pala hacia abajo
+        }
+    }
+
+    public Rectangle getBounds() { // Método para obtener los límites de la pala
+        return new Rectangle(x, y, width, height); // Devuelve un rectángulo que representa los límites de la pala
     }
 }

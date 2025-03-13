@@ -12,7 +12,7 @@ import javax.swing.Timer;
 // Clase que representa un panel donde se dibuja un círculo que rebota
 public class pelota extends JPanel implements ActionListener {
     private int x = 50, y = 50; // Coordenadas iniciales del círculo
-    private int dx = 4, dy = 4; // Velocidad del movimiento en X e Y
+    private int dx = 2, dy = 2; // Velocidad del movimiento en X e Y
     private final int RADIO = 10; // Radio del círculo
     private final int RETRASO = 10; // Retraso del temporizador en milisegundos
     private Timer timer; // Temporizador para controlar la animación
@@ -21,7 +21,6 @@ public class pelota extends JPanel implements ActionListener {
     public pelota() {
         setBackground(Color.WHITE); // Define el color de fondo del panel
         timer = new Timer(RETRASO, this); // Crea el temporizador con retraso especificado
-        timer.start(); // Inicia el temporizador
     }
 
     // Método para dibujar el círculo dentro del panel
