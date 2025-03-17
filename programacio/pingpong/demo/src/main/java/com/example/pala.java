@@ -2,7 +2,7 @@ package com.example;
 
 public class pala {
 
-    private int x = 25, y = 25; // Coordenadas iniciales de la pala
+    private int x = 20, y = 100; // Coordenadas iniciales de la pala
     //private int dx = 2, dy = 2; // Velocidad del movimiento en X e Y, se usa para poder mover las palas
     private final int ancho = 10, alto =200; // Sirve para controlar la velocidad de la animación, menor es más rápidoF
 
@@ -10,9 +10,16 @@ public class pala {
         // moin
     }
 
-    /* GETTER DE LOS ATRIBUTOS */
+    public void setX(int x) {//metodo set de any
+        this.x = x;//cambia l'aribut per l'any posat
+    }
+        /* GETTER DE LOS ATRIBUTOS */
     public int getX() {
         return x;
+    }
+
+    public void setY(int y) {//metodo set de any
+        this.y = y;//cambia l'aribut per l'any posat
     }
 
     public int getY() {

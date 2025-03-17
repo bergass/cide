@@ -16,7 +16,7 @@ public class juego extends JPanel implements ActionListener{
     private final Timer TIMER;
 
     public juego() {
-        setBackground(Color.gray);
+        setBackground(Color.WHITE);
         pelota = new pelota();
         palaI = new pala();
         palaD = new pala();
@@ -31,13 +31,20 @@ public class juego extends JPanel implements ActionListener{
         g2d.setColor(Color.RED); // Define el color del círculo
         g2d.fillOval(pelota.getX(), pelota.getY(), pelota.getRadio() * 2, pelota.getRadio() * 2); // Dibuja el círculo en las coordenadas x, y con el radio
 
-        g2d.setColor(Color.WHITE); // Define el color del círculo
-        g2d.fillRect(palaI.getX(), palaD.getY(), palaD.getAncho(), palaD.getAlto()); // Dibuja la pala derecha
+        g2d.setColor(Color.RED); // Define el color del círculo
+        g2d.fillRect(palaI.getX(), palaI.getY(), palaI.getAncho(), palaI.getAlto()); // Dibuja la pala derecha
+
+        g2d.setColor(Color.RED); // Define el color del círculo
+        palaD.setX(755);
+        palaD.setY(100);
+        g2d.fillRect(palaD.getX(), palaD.getY(), palaD.getAncho(), palaD.getAlto()); // Dibuja la pala derecha
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         pelota.moverPelota(this);
+        pelota.moverPelota2(palaI);
+        pelota.moverPelota2(palaD);
         repaint();
     }
     
