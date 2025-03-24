@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3.11.css">
+</head>
+<body>
+    <header>
+        <h2> Busqueda de vuelos </h2>
+    </header>
+    <main>
+        <div id="origenDiv">
+            <label for="origen">Origen:</label>
+            <select id="origen" name="sel[]" required>
+                <option value="" disabled selected>Elige el origen</option>
+                <option value="Palma">Palma</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Barcelona">Barcelona</option>
+            </select>
+        </div>
+        <div id="destinoDiv">
+            <label for="destino">Destino:</label>
+            <select id="destino" name="sel[]" required>
+                <option value="" disabled selected>Elige el destino</option>
+                <option value="Palma">Palma</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Londres">Londres</option>
+                <option value="Paris">Paris</option>
+                <option value="Roma">Roma</option>
+            </select>
+        </div>
+        <div id="fechaIniciDiv">
+            <label for="fechaIni">Fecha de inicio:</label>
+            <input type="date" name="fechaIni" id="fechaIni" required>
+        </div>
+        <div id="fechaFiDiv">
+            <label for="fechaFi">Fecha de fin:</label>
+            <input type="date" name="fechaFi" id="fechaFi" required>
+        </div>
+        <div id="numAdultosDiv">
+            <label for="numAdultos">Adultos:</label>
+            <input type="number" name="numAdultos" id="numAdultos" required>
+        </div>
+        <div id="numNiñosDiv">
+            <label for="numNiños">Niños:</label>
+            <input type="number" name="numNiños" id="numNiños" required>
+        </div>
+        <div id="descuentosDiv">
+            <label for="descuentos">Descuentos:</label>
+            <select id="descuentos" name="sel[]">
+                <option value="" disabled selected>Elige el descuento</option>
+                <option value="Descuento Residente">Descuento Residente</option>
+                <option value="Descuento Familia Numerosa">Descuento Familia Numerosa</option>
+                <option value="Descuento menor de edad">Descuento menor de edad</option>
+            </select>
+        </div>
+        <div id="submit">
+            <input type="button" value="Buscar" onclick="buscar()">
+        </div>
+        <script src="3.11.js"></script>
+    </main>
+</body>
+
+</html>

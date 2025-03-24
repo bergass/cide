@@ -9,7 +9,7 @@ public class pelota { // Define la clase pelota
 
     private int x = 50, y = 50; // Coordenadas iniciales del círculo
     // X EMPIEZA A CONTAR DESDE IZQUIERDA, Y DESDE ARRIBA
-    private int dx = 7, dy = 7; // Velocidad del movimiento en X e Y, se usa para poder mover el circulo
+    private int dx = 2, dy = 2; // Velocidad del movimiento en X e Y, se usa para poder mover el circulo
     private final int RADIO = 30; // Radio del círculo
     private final int RETRASO = 10; // Sirve para controlar la velocidad de la animación, menor es más rápido
     public int contador = 0;
