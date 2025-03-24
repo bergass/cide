@@ -8,7 +8,7 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Círculo Rebotante"); // Crea la ventana
             juego pong = new juego();
-
+            
 
             frame.add(pong); // Agrega el panel a la ventana
 

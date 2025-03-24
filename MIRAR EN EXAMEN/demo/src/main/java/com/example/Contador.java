@@ -18,7 +18,7 @@ public class Contador { // define la clase Contador
         JLabel contador = new JLabel("0"); // crea una etiqueta con el texto "0" para mostrar el contador
 
         texto.addKeyListener(new KeyListener() { // anade un listener al campo de texto para manejar eventos de teclado
-            int conta = 0; // inicializa el contador a 0
+               int conta = 0; // inicializa el contador a 0
 
             @Override
             public void keyTyped(KeyEvent e) { // metodo que se ejecuta cuando se escribe una tecla

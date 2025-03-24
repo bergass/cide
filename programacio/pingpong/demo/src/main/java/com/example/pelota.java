@@ -1,7 +1,6 @@
 package com.example; // Define el paquete de la clase
 
 import java.awt.Graphics; // Importa la clase Graphics para dibujar
-
 import javax.swing.JPanel; // Importa la clase JPanel para crear paneles
 
 
@@ -12,7 +11,8 @@ public class pelota { // Define la clase pelota
     private int dx = 2, dy = 2; // Velocidad del movimiento en X e Y, se usa para poder mover el circulo
     private final int RADIO = 30; // Radio del círculo
     private final int RETRASO = 10; // Sirve para controlar la velocidad de la animación, menor es más rápido
-    public int contador = 0;
+    private int contador1 = 0;
+    private int contador2 = 0;
 
     // Constructor que inicializa el panel e inicia el temporizador
     public pelota() {
@@ -36,12 +36,26 @@ public class pelota { // Define la clase pelota
         return RETRASO;
     }
 
+    public int getContador1() {
+        return contador1;
+    }
+    public int getContador2() {
+        return contador2;
+    }
+
     /* FUNCION DE MOVER LA PELOTA */
     public void moverPelota(JPanel ventana) { // Mueve la pelota dentro del panel
-        if (x + 2 * RADIO >= ventana.getWidth() || x <= 0) { // Si la pelota toca el borde derecho o izquierdo del panel
-            dx = -dx; // Invierte la dirección en X
-            contador++;
+        if (x <= 0) { // sale por la izquierda
+            x = 400;
+            y = 250;
+            contador1++;
+
+        } else if (x + 2 * RADIO >= ventana.getWidth()) { // sale por la derecha
+            x = 400;
+            y = 250;
+            contador2++;
         }
+
         if (y + 2 * RADIO >= ventana.getHeight() || y <= 0) { // Si la pelota toca el borde superior o inferior del
                                                               // panel
             dy = -dy; // Invierte la dirección en Y
@@ -91,5 +105,4 @@ public class pelota { // Define la clase pelota
     public void paint(Graphics g) { // Método para pintar la pelota
         // Método vacío, se implementará en el futuro
     }
-
 }
