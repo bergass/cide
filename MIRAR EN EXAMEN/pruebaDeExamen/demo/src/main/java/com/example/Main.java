@@ -10,7 +10,7 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Prueba"); // crea una ventana con el titulo calculadora
+        JFrame frame = new JFrame("Prueba"); // crea una vent con el titulo calculadora
         frame.setSize(400, 400); // establece el tamano de la ventana a 400x300 pixeles
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // cierra la aplicacion al cerrar la ventana
         frame.setLayout(new FlowLayout()); // establece el layout de la ventana como flowlayout
@@ -72,7 +72,6 @@ public class Main {
             }
         });
         panel.add(value, gbc);
-
         gbc.gridx = 0;
         gbc.gridy = 4;
         JLabel ficha = new JLabel("");

@@ -1,4 +1,4 @@
-package com.example; // define el paquete de la clase
+        package com.example; // define el paquete de la clase
 
 import javax.swing.*; // importa la libreria swing para crear interfaces graficas
 import javax.swing.event.ChangeEvent; // importa la clase ChangeEvent para manejar eventos de cambio

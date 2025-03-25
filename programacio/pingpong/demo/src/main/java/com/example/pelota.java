@@ -1,67 +1,61 @@
-package com.example; // Define el paquete de la clase
+package com.example; // define el paquete de la clase
 
-import java.awt.Graphics; // Importa la clase Graphics para dibujar
-import javax.swing.JPanel; // Importa la clase JPanel para crear paneles
+import java.awt.Graphics; // importa la clase graphics para dibujar
+import javax.swing.JPanel; // importa la clase jpanel para crear paneles
 
+public class pelota { // define la clase pelota
 
-public class pelota { // Define la clase pelota
+    private int x = 50, y = 50; // coordenadas iniciales del circulo
+    private int dx = 2, dy = 2; // velocidad del movimiento en x e y
+    private final int RADIO = 10; // radio del circulo
+    private final int RETRASO = 10; // retraso de la animacion
+    private int contador1 = 0; // contador para el jugador 1
+    private int contador2 = 0; // contador para el jugador 2
 
-    private int x = 50, y = 50; // Coordenadas iniciales del círculo
-    // X EMPIEZA A CONTAR DESDE IZQUIERDA, Y DESDE ARRIBA
-    private int dx = 2, dy = 2; // Velocidad del movimiento en X e Y, se usa para poder mover el circulo
-    private final int RADIO = 10; // Radio del círculo
-    private final int RETRASO = 10; // Sirve para controlar la velocidad de la animación, menor es más rápido
-    private int contador1 = 0;
-    private int contador2 = 0;
-
-    // Constructor que inicializa el panel e inicia el temporizador
-    public pelota() {
-        // Constructor vacío
+    public pelota() { // constructor de la clase pelota
+        // constructor vacio
     }
 
-    /* GETTER DE LOS ATRIBUTOS */
-    public int getX() { // Devuelve la coordenada X
+    public int getX() { // devuelve la coordenada x
         return x;
     }
 
-    public int getY() { // Devuelve la coordenada Y
+    public int getY() { // devuelve la coordenada y
         return y;
     }
 
-    public int getRadio() { // Devuelve el radio del círculo
+    public int getRadio() { // devuelve el radio del circulo
         return RADIO;
     }
 
-    public int getRetraso() { // Devuelve el retraso de la animación
+    public int getRetraso() { // devuelve el retraso de la animacion
         return RETRASO;
     }
 
-    public int getContador1() {
+    public int getContador1() { // devuelve el contador 1
         return contador1;
     }
-    public int getContador2() {
+
+    public int getContador2() { // devuelve el contador 2
         return contador2;
     }
 
-    /* FUNCION DE MOVER LA PELOTA */
-    public void moverPelota(JPanel ventana) { // Mueve la pelota dentro del panel
-        if (x <= 0) { // sale por la izquierda
-            x = 400;
-            y = 250;
-            contador1++;
-
-        } else if (x + 2 * RADIO >= ventana.getWidth()) { // sale por la derecha
-            x = 400;
-            y = 250;
-            contador2++;
+    public void moverPelota(JPanel ventana) { // mueve la pelota dentro del panel
+        if (x <= 0) { // si la pelota sale por la izquierda
+            x = 400; // reinicia la posicion x
+            y = 250; // reinicia la posicion y
+            contador1++; // incrementa el contador 1
+        } else if (x + 2 * RADIO >= ventana.getWidth()) { // si la pelota sale por la derecha
+            x = 400; // reinicia la posicion x
+            y = 250; // reinicia la posicion y
+            contador2++; // incrementa el contador 2
         }
 
-        if (y + 2 * RADIO >= ventana.getHeight() || y <= 0) { // Si la pelota toca el borde superior o inferior del
-                                                              // panel
-            dy = -dy; // Invierte la dirección en Y
+        if (y + 2 * RADIO >= ventana.getHeight() || y <= 0) { // si la pelota toca el borde superior o inferior
+            dy = -dy; // invierte la direccion en y
         }
-        x += dx; // Actualiza la coordenada X
-        y += dy; // Actualiza la coordenada Y
+        x += dx; // actualiza la coordenada x
+        y += dy; // actualiza la coordenada y
     }
 
     public void moverPelota2(pala palaa) { // Mueve la pelota considerando las palas
