@@ -4,6 +4,8 @@ import javax.swing.JPanel; // importa la clase jpanel para crear paneles
 import java.awt.event.KeyEvent; // importa la clase keyevent para manejar eventos de teclado
 import java.awt.event.KeyListener; // importa la clase keylistener para manejar eventos de teclado
 
+// Albert Bergas Consuegra
+
 public class pala { // define la clase pala
 
     private int x = 20, y = 100; // coordenadas iniciales de la pala

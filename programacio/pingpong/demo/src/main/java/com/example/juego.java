@@ -10,6 +10,8 @@ import java.awt.event.KeyEvent; // importa la clase keyevent para manejar evento
 import javax.swing.JPanel; // importa la clase jpanel para crear paneles
 import javax.swing.Timer; // importa la clase timer para manejar temporizadores
 
+// Albert Bergas Consuegra
+
 public class juego extends JPanel implements ActionListener { // define la clase juego que extiende jpanel e implementa actionlistener
     pelota pelota; // declara una variable de tipo pelota
     pala palaI; // declara una variable de tipo pala para la pala izquierda

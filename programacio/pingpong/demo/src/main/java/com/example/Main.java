@@ -6,11 +6,11 @@ import javax.swing.SwingUtilities; // importa la clase swingutilities para manej
 import javax.swing.JButton; // importa la clase jbutton para crear botones
 import javax.swing.JLabel; // importa la clase jlabel para crear etiquetas
 import javax.swing.JTextField; // importa la clase jtextfield para crear campos de texto
-
 import java.awt.event.ActionEvent; // importa la clase actionevent para manejar eventos
 import java.awt.event.ActionListener; // importa la clase actionlistener para manejar eventos
-import javax.swing.*; // importa todas las clases de javax.swing
 import java.awt.*; // importa todas las clases de java.awt
+
+// Albert Bergas Consuegra
 
 public class Main { // define la clase main
     public static void main(String[] args) { // metodo principal
@@ -22,45 +22,55 @@ public class Main { // define la clase main
 
             JPanel menu = new JPanel(new GridBagLayout()); // crea un panel con layout gridbaglayout
             java.awt.GridBagConstraints gbc = new GridBagConstraints(); // crea un objeto gridbagconstraints para manejar las posiciones
-            gbc.insets = new Insets(2, 0, 2, 30); // establece los margenes internos del layout
-            gbc.anchor = GridBagConstraints.WEST; // establece el anclaje de los componentes al oeste
+            gbc.insets = new Insets(0, 0, 2, 10); // establece los margenes internos del layout
+            gbc.anchor = GridBagConstraints.NORTH; // establece el anclaje de los componentes al norte
 
+            Font font = new Font("Arial", Font.BOLD, 24); // crea una nueva fuente
+            Font font2 = new Font("Arial", Font.PLAIN, 20); // crea una nueva fuente
             JLabel bienvenida = new JLabel("Bienvenido al Ping PONG"); // crea una etiqueta de bienvenida
-            gbc.gridx = 2; // establece la columna
+            bienvenida.setFont(font); // establece la fuente de la etiqueta
+            gbc.gridx = 0; // establece la columna
             gbc.gridy = 0; // establece la fila
+            gbc.gridwidth = 3; // establece que el boton ocupa 2 columnas
             menu.add(bienvenida, gbc); // añade la etiqueta al panel
 
             JLabel introduccion = new JLabel("A continuación elegiras el nombre de J1 y el J2"); // crea una etiqueta de introduccion
-            gbc.gridx = 2; // establece la columna
+            introduccion.setFont(font2); // establece la fuente de la etiqueta
+            gbc.gridx = 0; // establece la columna
             gbc.gridy = 1; // establece la fila
-            gbc.gridwidth = 2; // establece que el boton ocupa 2 columnas
+            gbc.gridwidth = 3; // establece que el boton ocupa 2 columnas
             menu.add(introduccion, gbc); // añade la etiqueta al panel
 
             JLabel J1 = new JLabel("Nombre del Jugador 1:"); // crea una etiqueta para el jugador 1
+            J1.setFont(font); // establece la fuente de la etiqueta
             gbc.gridx = 0; // establece la columna
             gbc.gridy = 2; // establece la fila
             gbc.gridwidth = 1; // establece que el boton ocupa 1 columna
             menu.add(J1, gbc); // añade la etiqueta al panel
             JTextField nj1 = new JTextField(10); // crea un campo de texto para el jugador 1
-            gbc.gridx = 1; // establece la columna
-            gbc.gridy = 2; // establece la fila
-            gbc.gridwidth = 3; // establece que el boton ocupa 3 columnas
+            nj1.setFont(font2); // establece la fuente del campo de texto
+            gbc.gridx = 0; // establece la columna
+            gbc.gridy = 3; // establece la fila
+            gbc.gridwidth = 1; // establece que el boton ocupa 3 columnas
             menu.add(nj1, gbc); // añade el campo de texto al panel
 
             JLabel J2 = new JLabel("Nombre del Jugador 2:"); // crea una etiqueta para el jugador 2
-            gbc.gridx = 3; // establece la columna
+            J2.setFont(font); // establece la fuente de la etiqueta
+            gbc.gridx = 2; // establece la columna
             gbc.gridy = 2; // establece la fila
             gbc.gridwidth = 1; // establece que el boton ocupa 1 columna
             menu.add(J2, gbc); // añade la etiqueta al panel
             JTextField nj2 = new JTextField(10); // crea un campo de texto para el jugador 2
-            gbc.gridx = 4; // establece la columna
-            gbc.gridy = 2; // establece la fila
-            gbc.gridwidth = 3; // establece que el boton ocupa 3 columnas
+            nj2.setFont(font2); // establece la fuente del campo de texto
+            gbc.gridx = 2; // establece la columna
+            gbc.gridy = 3; // establece la fila
+            gbc.gridwidth = 1; // establece que el boton ocupa 3 columnas
             menu.add(nj2, gbc); // añade el campo de texto al panel
 
             JButton empezar = new JButton("Empezar"); // crea un boton para empezar el juego
-            gbc.gridx = 2; // establece la columna
-            gbc.gridy = 3; // establece la fila
+            empezar.setFont(font); // establece la fuente del boton
+            gbc.gridx = 1; // establece la columna
+            gbc.gridy = 4; // establece la fila
             empezar.addActionListener(new ActionListener() { // añade un actionlistener al boton
                @Override
                 public void actionPerformed(ActionEvent e) { // metodo para manejar el evento de clic

@@ -3,6 +3,8 @@ package com.example; // define el paquete de la clase
 import java.awt.Graphics; // importa la clase graphics para dibujar
 import javax.swing.JPanel; // importa la clase jpanel para crear paneles
 
+// Albert Bergas Consuegra
+
 public class pelota { // define la clase pelota
 
     private int x = 50, y = 50; // coordenadas iniciales del circulo
