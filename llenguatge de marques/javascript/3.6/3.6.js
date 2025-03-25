@@ -68,3 +68,18 @@ function filtrarCompletades() {
         }
     })
 }
+//Actividad 7 buscador
+inputCercador.addEventListener("input", function () {
+    const textCercar = inputCercador.value.toLowerCase();
+    productes.forEach(producte => {
+        const textProducte = producte.textContent.toLowerCase();
+        if (textProducte.includes(textCercat)) {
+            producte.style.display = "block";
+        } else {
+            producte.style.display = "none";
+        }
+    })
+
+}); 
+
+

@@ -1,6 +1,8 @@
 package com.example;
 
 import java.awt.Color;
+import java.awt.Font;
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
@@ -41,13 +43,33 @@ public class juego extends JPanel implements ActionListener {
         g2d.setColor(Color.RED); // Define el color del círculo
         g2d.fillRect(palaI.getX(), palaI.getY(), palaI.getAncho(), palaI.getAlto()); // Dibuja la pala derecha
         g2d.setColor(Color.RED); // Define el color del círculo
-        palaD.setX(755);
+        palaD.setX(746);
         g2d.fillRect(palaD.getX(), palaD.getY(), palaD.getAncho(), palaD.getAlto()); // Dibuja la pala derecha
-        c1 = pelota.getContador1();
-        c2 = pelota.getContador2();
-        g2d.drawString(String.valueOf(c1), 200, 50);
-        g2d.drawString(String.valueOf(c2), 600, 50);
+        c1 = pelota.getContador2();
+        c2 = pelota.getContador1();
+
+        Font font = new Font("Arial", Font.BOLD, 30); // Define una nueva fuente
+        g2d.setFont(font); // Establece la nueva fuente
+        g2d.setColor(Color.BLACK); // Define el color del círculo
+
+        g2d.drawString("Jugador 1: "+String.valueOf(c1), (getWidth()-650), 50);
+        g2d.drawString("Jugador 2: "+String.valueOf(c2), (getWidth()-300), 50);
+
+        g2d.drawString("|", (getWidth()/2), (getHeight()-20));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-60));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-100));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-140));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-180));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-220));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-260));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-300));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-340));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-380));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-420));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-460));
+        g2d.drawString("|", (getWidth()/2), (getHeight()-500));
     }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {

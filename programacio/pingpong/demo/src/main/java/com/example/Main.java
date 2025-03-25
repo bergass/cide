@@ -6,7 +6,7 @@ import javax.swing.SwingUtilities;
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Círculo Rebotante"); // Crea la ventana
+            JFrame frame = new JFrame("Ping PONG"); // Crea la ventana
             juego pong = new juego();
             
 

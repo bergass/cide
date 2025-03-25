@@ -9,7 +9,7 @@ public class pala {
     private int x = 20, y = 100; // Coordenadas iniciales de la pala
     // private int dx = 2, dy = 2; // Velocidad del movimiento en X e Y, se usa para
     // poder mover las palas
-    private final int ancho = 10, alto = 200; // Sirve para controlar la velocidad de la animación, menor es más rápidoF
+    private final int ancho = 20, alto = 110; // Sirve para controlar la velocidad de la animación, menor es más rápidoF
 
     public pala() {
         // moin
