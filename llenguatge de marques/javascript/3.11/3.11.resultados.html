@@ -4,24 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados</title>
+    <script src="busqueda.js"></script>
 </head>
 <body>
-    <p>Origen: <span id="origenRes"></span></p>
-    <p>Destino: <span id="destinoRes"></span></p>
-    <p>Fecha de inicio: <span id="fechaIniciRes"></span></p>
-    <p>Fecha de fin: <span id="fechaFiRes"></span></p>
-    <p>Adultos: <span id="numAdultosRes"></span></p>
-    <p>Niños: <span id="numNiñosRes"></span></p>
-    <p>Descuentos: <span id="descuentosRes"></span></p>
-    <button onclick="window.location.href='3.11.html'">Nueva búsqueda</button>
-    <script>
-        document.getElementById("origenRes").textContent = new URLSearchParams(window.location.search).get("origen");
-        document.getElementById("destinoRes").textContent = new URLSearchParams(window.location.search).get("destino");
-        document.getElementById("fechaIniciRes").textContent = new URLSearchParams(window.location.search).get("fechaIni");
-        document.getElementById("fechaFiRes").textContent = new URLSearchParams(window.location.search).get("fechaFi");
-        document.getElementById("numAdultosRes").textContent = new URLSearchParams(window.location.search).get("numAdultos");
-        document.getElementById("numNiñosRes").textContent = new URLSearchParams(window.location.search).get("numNiños");
-        document.getElementById("descuentosRes").textContent = new URLSearchParams(window.location.search).get("descuentos");
-    </script>
+    <div id="resultados"></div>
+    <input type="button" value="Volver" onclick="window.location.href='3.11.html';">
 </body>
 </html>

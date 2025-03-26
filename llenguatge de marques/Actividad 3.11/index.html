@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluge</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="control.js" defer></script>
+</head>
+
+<body>
+    <h2>Suchmaschine</h2>
+    <form id="elFormulario" method="post" action="confirmacion.html">
+        <label for="inOrigen" id="laOrigen">Selecciona una opción: </label>
+        <select id="inOrigen" name="PaisOrigen" required>
+            <option value="1"></option>
+            <option value="PMI">PMI - Palma de Mallorca</option>
+            <option value="BCN">BCN - Barcelona</option>
+            <option value="MAD">MAD - Madrid</option>
+        </select>
+
+        <label for="inDestino" id="laDestino">Selecciona una opción: </label>
+        <select id="inDestino" name="PaisDestino" required>
+            <option value="1"></option>
+            <option value="BCN">BCN - Barcelona</option>
+            <option value="PMI">PMI - Palma de Mallorca</option>
+            <option value="MAD">MAD - Madrid</option>
+            <option value="LON">LON - Londres</option>
+            <option value="ROM">ROM - Roma</option>
+            <option value="PAR">PAR - Paris</option>
+        </select>
+
+        <br>
+
+        <label for="fechaInicio">Selecciona la fecha de ida: </label>
+        <input type="date" name="FechaDeInicio" id="fechaInicio" required>
+
+        <label for="fechaFinal">Selecciona la fecha de vuelta: </label>
+        <input type="date" name="FechaDeVuelta" id="fechaFinal" required>
+
+        <br>
+
+        <label for="inAdultos" id="laAdultos">Adultos: </label>
+        <input type="number" name="totalAdultos" id="inAdultos" min="1" max="11" required>
+
+        <label for="inNinyos" id="laNinyos">Niños: </label>
+        <input type="number" name="totalNiños" id="inNinyos" min="0" max="11" required>
+
+        <br>
+
+        <label for="inDescuentos" id="laDescuentos">Selecciona una opción: </label>
+        <select id="inDescuentos" name="Descuentos">
+            <option value="sinDescuento">No se aplica ningun descuento</option>
+            <option value="residente">Descuento de residente</option>
+            <option value="famNumerosa">Descuento por familia numerosa</option>
+        </select>
+
+        <br>
+
+        <input type="submit" value="Buscar" id="btnBuscar">
+    </form>
+
+</body>
+
+</html>

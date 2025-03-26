@@ -1,19 +1,32 @@
-function buscar() {
-    var origen = document.getElementById("origen").value;
-    var destino = document.getElementById("destino").value;
-    var fechaIni = document.getElementById("fechaIni").value;
-    var fechaFi = document.getElementById("fechaFi").value;
-    var numAdultos = document.getElementById("numAdultos").value;
-    var numNiños = document.getElementById("numNiños").value;
-    var descuentos = document.getElementById("descuentos").value;
+function mostrarResultados() {
+    var resultados = document.getElementById('resultados');
 
-    var urlCompleta = "dispo.html?paramOrigen=" + encodeURIComponent(origen);
-    urlCompleta += "&paramDestino=" + encodeURIComponent(destino);
-    urlCompleta += "&paramFechaInicio=" + encodeURIComponent(fechaIni);
-    urlCompleta += "&paramFechaFin=" + encodeURIComponent(fechaFi);
-    urlCompleta += "&paramNumAdultos=" + encodeURIComponent(numAdultos);
-    urlCompleta += "&paramNumNinos=" + encodeURIComponent(numNiños);
-    urlCompleta += "&paramDescuentos=" + encodeURIComponent(descuentos);
+    // Recuperar los datos almacenados en sessionStorage
+    var origen = sessionStorage.getItem('origen');
+    var destino = sessionStorage.getItem('destino');
+    var fechaIni = sessionStorage.getItem('fechaIni');
+    var fechaFi = sessionStorage.getItem('fechaFi');
+    var adultos = sessionStorage.getItem('adultos');
+    var niños = sessionStorage.getItem('niños');
+    var descuentos = sessionStorage.getItem('descuentos');
 
-    window.location.href = urlCompleta;
+    // Crear el contenido HTML para mostrar los resultados
+    var datosRes = `
+        <h2>Confirmación de tu vuelo</h2>
+        <p><strong>Origen:</strong> ${origen}</p>
+        <p><strong>Destino:</strong> ${destino}</p>
+        <p><strong>Fecha de ida:</strong> ${fechaIni}</p>
+        <p><strong>Fecha de vuelta:</strong> ${fechaFi}</p>
+        <p><strong>Adultos:</strong> ${adultos}</p>
+        <p><strong>Niños:</strong> ${niños}</p>
+        <p><strong>Descuento aplicado:</strong> ${descuentos}</p>
+    `;
+
+    // Insertar el contenido en el div de resultados
+    if (resultados) {
+        resultados.innerHTML = datosRes;
+    }
 }
+
+// Ejecutar la función cuando el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', mostrarResultados);

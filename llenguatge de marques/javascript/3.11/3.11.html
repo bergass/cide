@@ -11,7 +11,7 @@
         <h2>Busqueda de vuelos</h2>
     </header>
     <main>
-        <form action="resultados_get.html" method="GET">
+        <form id="formulario" action="3.11.resultados.html" method="post">
             <label for="origen">Origen:</label>
             <select id="origen" name="origen" required>
                 <option value="" disabled selected>Elige el origen</option>
@@ -19,6 +19,7 @@
                 <option value="Madrid">Madrid</option>
                 <option value="Barcelona">Barcelona</option>
             </select>
+            <br>
             <label for="destino">Destino:</label>
             <select id="destino" name="destino" required>
                 <option value="" disabled selected>Elige el destino</option>
@@ -29,21 +30,28 @@
                 <option value="Paris">Paris</option>
                 <option value="Roma">Roma</option>
             </select>
+            <br>
+
             <label for="fechaIni">Fecha de inicio:</label>
             <input type="date" name="fechaIni" id="fechaIni" required>
+            <br>
             <label for="fechaFi">Fecha de fin:</label>
             <input type="date" name="fechaFi" id="fechaFi" required>
+            <br>
             <label for="numAdultos">Adultos:</label>
             <input type="number" name="numAdultos" id="numAdultos" required>
+            <br>
             <label for="numNiños">Niños:</label>
             <input type="number" name="numNiños" id="numNiños" required>
+            <br>
             <label for="descuentos">Descuentos:</label>
             <select id="descuentos" name="descuentos">
                 <option value="" disabled selected>Elige el descuento</option>
                 <option value="Descuento Residente">Descuento Residente</option>
                 <option value="Descuento Familia Numerosa">Descuento Familia Numerosa</option>
             </select>
-            <input type="submit" value="Buscar">
+            <br>
+            <input type="submit" value="Buscar" id="buscar">
         </form>
         <script src="3.11.js"></script>
     </main>

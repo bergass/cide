@@ -1,39 +1,75 @@
-function buscar() {
-    var origen = document.getElementById("origen").value;
-    var destino = document.getElementById("destino").value;
-    var fechaInici = document.getElementById("fechaIni").value;
-    var fechaFi = document.getElementById("fechaFi").value;
-    var numAdultos = document.getElementById("numAdultos").value;
-    var numNiños = document.getElementById("numNiños").value;
-    var descuentos = document.getElementById("descuentos").value;
-    const today = new Date().toISOString().split('T')[0];
+const origen = document.getElementById('origen');
+const destino = document.getElementById('destino');
+const fechaIni = document.getElementById('fechaIni');
+const fechaFi = document.getElementById('fechaFi');
+const numAdultos = document.getElementById('numAdultos');
+const numNiños = document.getElementById('numNiños');
+const descuentos = document.getElementById('descuentos');
+const formulario = document.getElementById('formulario');
+const btnBuscar = document.getElementById('buscar');
 
-    if (origen === destino) {
-        alert('El origen y el destino no pueden ser iguales.');
-        return false;
+function prufOrigenDestino() {
+    var origen = origen.value;
+    var destino = destino.value;
+
+    if (origen == destino) {
+        alert('Origen y destino NO pueden ser el mismo');
+        destino.value = '1';
     }
+}
 
-    if (fechaInici < today) {
-        alert('La fecha de inicio no puede ser en el pasado.');
-        return false;
+function prufFechas() {
+    var hoy = new Date().toISOString().split('T')[0];
+    
+    fechaIni.setAttribute('min', hoy);
+
+    fechaIni.addEventListener('change', function() {
+        fechaFi.setAttribute('min', fechaIni.value);
+    });
+
+    fechaFi.addEventListener('change', function() {
+        if (fechaFi.value < fechaIni.value) {
+            alert('La fecha de fin no puede ser anterior a la fecha de inicio');
+            fechaFi.value = '';
+        }
+    });
+}
+
+function prufDescuentos() {
+    if (descuentos.value === 'residente') {
+        var origen = origen.value;
+        var destino = destino.value;
+
+        
+        var esValida =
+            (origen === 'PMI' && (destino === 'BCN' || destino === 'MAD')) ||
+            (destino === 'PMI' && (origen === 'BCN' || origen === 'MAD'));
+
+        if (esValida) {
+            alert('El descuento de residente se aplica correctamente.');
+        } else {
+            alert('Para aplicar el descuento de residente, el origen debe ser Palma y el destino Madrid o Barcelona (o a la inversa).');
+            descuentos.value = 'sinDescuento'; 
+        }
     }
+}
 
-    if (fechaFi < today) {
-        alert('La fecha de fin no puede ser en el pasado.');
-        return false;
-    }
+function obtenerInfo(evento) {
+    evento.preventDefault(); // Evitar que el formulario se envie
+    // guardamos en session, pero podria ser local
+    sessionStorage.setItem('origen', origen.value);
+    sessionStorage.setItem('destino', destino.value);
+    sessionStorage.setItem('fechaIni', fechaIni.value);
+    sessionStorage.setItem('fechaFi', fechaFi.value);
+    sessionStorage.setItem('numAdultos', numAdultos.value);
+    sessionStorage.setItem('numNiños', numNiños.value);
+    sessionStorage.setItem('descuentos', descuentos.value);
 
-    if (fechaFi < fechaInici) {
-        alert('La fecha de fin no puede ser anterior a la fecha de inicio.');
-        return false;
-    }
+    window.location.href = 'confirmacion.html';
 
-    document.getElementById("origenRes").textContent = origen;
-    document.getElementById("destinoRes").textContent = destino;
-    document.getElementById("fechaIniciRes").textContent = fechaInici;
-    document.getElementById("fechaFiRes").textContent = fechaFi;
+}
 
-    // Redirigir a 3.11.resultados.html
-    window.location.href = '3.11.resultados.html';
-    return true;
-} 
+destino.addEventListener('change', prufOrigenDestino);
+fechaIni.addEventListener('mouseleave', prufFechas);
+descuentos.addEventListener('change', prufDescuentos);
+elFormulario.addEventListener('submit', obtenerInfo);
