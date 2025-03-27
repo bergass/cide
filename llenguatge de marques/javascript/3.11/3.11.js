@@ -42,8 +42,8 @@ function prufDescuentos() {
 
         
         var esValida =
-            (origen === 'PMI' && (destino === 'BCN' || destino === 'MAD')) ||
-            (destino === 'PMI' && (origen === 'BCN' || origen === 'MAD'));
+            (origen === 'Palma' && (destino === 'Barcelona' || destino === 'Madrid')) ||
+            (destino === 'Palma' && (origen === 'Barcelona' || origen === 'Madrid'));
 
         if (esValida) {
             alert('El descuento de residente se aplica correctamente.');
@@ -65,11 +65,11 @@ function obtenerInfo(evento) {
     sessionStorage.setItem('numNiños', numNiños.value);
     sessionStorage.setItem('descuentos', descuentos.value);
 
-    window.location.href = 'confirmacion.html';
+    window.location.href = '3.11.resultados.html';
 
 }
 
 destino.addEventListener('change', prufOrigenDestino);
 fechaIni.addEventListener('mouseleave', prufFechas);
 descuentos.addEventListener('change', prufDescuentos);
-elFormulario.addEventListener('submit', obtenerInfo);
+form.addEventListener('submit', obtenerInfo);
