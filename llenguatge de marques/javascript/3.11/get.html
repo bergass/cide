@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de búsqueda</title>
+    <link rel="stylesheet" href="formulario.css">
+    <script src="get.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2>Búsqueda de vuelos</h2>
+    </header>
+    <main>
+        <form id="formulario" action="get2.html" method="get">
+            <label for="origen">Origen:</label>
+            <select id="origen" name="origen" required>
+                <option value="MAD">Madrid</option>
+                <option value="BCN">Barcelona</option>
+                <option value="VAL">Valencia</option>
+            </select>
+            <br>
+            <label for="destino">Destino:</label>
+            <select id="destino" name="destino" required>
+                <option value="NYC">Nueva York</option>
+                <option value="LON">Londres</option>
+                <option value="PAR">París</option>
+            </select>
+            <br>
+            <label for="fechaIni">Fecha de ida:</label>
+            <input type="date" id="fechaIni" name="fechaIni" required>
+            <br>
+            <label for="fechaFi">Fecha de vuelta:</label>
+            <input type="date" id="fechaFi" name="fechaFi">
+            <br>
+            <label for="adultos">Adultos:</label>
+            <input type="number" id="adultos" name="adultos" min="1" value="1" required>
+            <br>
+            <label for="niños">Niños:</label>
+            <input type="number" id="niños" name="niños" min="0" value="0">
+            <br>
+            <label for="descuentos">Descuentos:</label>
+            <select id="descuentos" name="descuentos">
+                <option value="ninguno">Ninguno</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="mayor">Mayor de 65</option>
+            </select>
+            <br>
+            <button type="submit">Buscar</button>
+        </form>
+    </main>
+</body>
+</html>
