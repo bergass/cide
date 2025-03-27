@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pec.css">
+    <script src="pec.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h2>Titol</h2>
+    </header>
+    <main>
+        <p id="mostrarClicks"></p>
+        <button id="contar" onclick="contar()">Contar</button>
+        <button id="reiniciar" onclick="reiniciar()">Reiniciar</button>
+        <h2 id="afegirComentaris">Afegir comentaris</h2>
+        <form action="pec.html" id="formulario" method="post">
+            <label for="comentaris">Comentaris:</label>
+            <input type="text" name="comentaris" id="comentaris">
+            <br>
+            <input type="button" id="afegirComentarisBtn" onclick="afegir()" value="Afegir"></input>
+        </form>
+        <div id="comentarisAfegits"></div>
+        <button id="borrarComentarisBtn" onclick="borrar()">borrarComentarisBtn</button>
+    </main>
+</body>
+
+</html>
