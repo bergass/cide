@@ -12,7 +12,6 @@ function mostrarResultados() {
 
     // Crear el contenido HTML para mostrar los resultados
     var datosRes = `
-        <h2>Confirmación de tu vuelo</h2>
         <p><strong>Origen:</strong> ${origen}</p>
         <p><strong>Destino:</strong> ${destino}</p>
         <p><strong>Fecha de ida:</strong> ${fechaIni}</p>

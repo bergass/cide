@@ -1,9 +1,5 @@
 package com.example; // define el paquete de la clase
 
-import javax.swing.JPanel; // importa la clase jpanel para crear paneles
-import java.awt.event.KeyEvent; // importa la clase keyevent para manejar eventos de teclado
-import java.awt.event.KeyListener; // importa la clase keylistener para manejar eventos de teclado
-
 // Albert Bergas Consuegra
 
 public class pala { // define la clase pala
@@ -37,30 +33,6 @@ public class pala { // define la clase pala
 
     public int getAlto() { // metodo get para el alto de la pala
         return alto;
-    }
-
-    public void addKeyListenerToComponent(JPanel panel, int upKey, int downKey) { // añade un keylistener al panel
-        panel.addKeyListener(new KeyListener() { // crea un nuevo keylistener
-            @Override
-            public void keyTyped(KeyEvent e) { // metodo para manejar eventos de tipo de tecla
-                // no hace nada
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) { // metodo para manejar eventos de presion de tecla
-                int keyCode = e.getKeyCode(); // obtiene el codigo de la tecla presionada
-                if (keyCode == upKey) { // si la tecla presionada es la tecla de subir
-                    moverPala(-20, panel.getHeight()); // mueve la pala hacia arriba
-                } else if (keyCode == downKey) { // si la tecla presionada es la tecla de bajar
-                    moverPala(20, panel.getHeight()); // mueve la pala hacia abajo
-                }
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) { // metodo para manejar eventos de liberacion de tecla
-                // no hace nada
-            }
-        });
     }
 
     public void moverPala(int nuevaY, int altoPanel) { // metodo para mover la pala

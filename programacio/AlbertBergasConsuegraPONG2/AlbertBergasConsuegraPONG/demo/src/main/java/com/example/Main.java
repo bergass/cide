@@ -79,7 +79,6 @@ public class Main { // define la clase main
                     juego pong = new juego(nombreJ1, nombreJ2); // crea un nuevo juego con los nombres de los jugadores
                     frame.remove(menu); // elimina el menu de la ventana
                     frame.add(pong); // añade el juego a la ventana
-                    pong.requestFocusInWindow();
                     frame.revalidate(); // actualiza la ventana (ayudita de chatGPT(no ho hagues tret mai))
                     frame.repaint(); // repinta la ventana
                 }

@@ -9,11 +9,10 @@ import java.awt.event.ActionListener; // importa la clase actionlistener para ma
 import java.awt.event.KeyEvent; // importa la clase keyevent para manejar eventos de teclado
 import javax.swing.JPanel; // importa la clase jpanel para crear paneles
 import javax.swing.Timer; // importa la clase timer para manejar temporizadores
-import java.awt.event.KeyListener; // importa la clase keylistener para manejar eventos de teclado
 
 // Albert Bergas Consuegra
 
-public class juego extends JPanel implements ActionListener, KeyListener { // define la clase juego que extiende jpanel e implementa actionlistener
+public class juego extends JPanel implements ActionListener { // define la clase juego que extiende jpanel e implementa actionlistener
     pelota pelota; // declara una variable de tipo pelota
     pala palaI; // declara una variable de tipo pala para la pala izquierda
     pala palaD; // declara una variable de tipo pala para la pala derecha
@@ -30,38 +29,11 @@ public class juego extends JPanel implements ActionListener, KeyListener { // de
         pelota = new pelota(); // crea una nueva pelota
         palaI = new pala(); // crea una nueva pala izquierda
         palaD = new pala(); // crea una nueva pala derecha
+        palaI.addKeyListenerToComponent(this, KeyEvent.VK_W, KeyEvent.VK_S); // añade un keylistener a la pala izquierda
+        palaD.addKeyListenerToComponent(this, KeyEvent.VK_UP, KeyEvent.VK_DOWN); // añade un keylistener a la pala derecha
         setFocusable(true); // establece el panel como enfocable
-        requestFocusInWindow();
-        addKeyListener(this);
         TIMER = new Timer(pelota.getRetraso(), this); // crea un nuevo temporizador con el retraso de la pelota
         TIMER.start(); // inicia el temporizador
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        int keyCode = e.getKeyCode();
-        // Movimiento de la pala izquierda
-        if (keyCode == KeyEvent.VK_W) {
-            palaI.moverPala(-20, getHeight()); // mueve hacia arriba
-        } else if (keyCode == KeyEvent.VK_S) {
-            palaI.moverPala(20, getHeight()); // mueve hacia abajo
-        }
-        // Movimiento de la pala derecha
-        if (keyCode == KeyEvent.VK_UP) {
-            palaD.moverPala(-20, getHeight()); // mueve hacia arriba
-        } else if (keyCode == KeyEvent.VK_DOWN) {
-            palaD.moverPala(20, getHeight()); // mueve hacia abajo
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        // No se necesita implementar nada aquí
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-        // No se necesita implementar nada aquí
     }
 
     @Override
