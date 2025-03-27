@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const params = new URLSearchParams(window.location.search);
 
-    // Recoger los datos del GET
     const origen = params.get("origen");
     const destino = params.get("destino");
     const fechaIni = params.get("fechaIni");
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const niños = params.get("niños");
     const descuentos = params.get("descuentos");
 
-    // Crear el contenido HTML para mostrar los resultados
     const resultadosDiv = document.getElementById("resultados");
     if (resultadosDiv) {
         resultadosDiv.innerHTML = `
