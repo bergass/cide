@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <p><strong>Fecha de vuelta:</strong> ${fechaFi || "No especificada"}</p>
             <p><strong>Adultos:</strong> ${adultos}</p>
             <p><strong>Niños:</strong> ${niños}</p>
-            <p><strong>Descuento aplicado:</strong> ${descuentos}</p>
+            <p><strong>Descuento aplicado:</strong> ${descuentos === "Descuentos Residente" ? "Residente (válido)" : descuentos}</p>
         `;
     }
 });

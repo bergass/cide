@@ -6,28 +6,23 @@ const numAdultos = document.getElementById('numAdultos');
 const numNiños = document.getElementById('numNiños');
 const descuentos = document.getElementById('descuentos');
 const formulario = document.getElementById('formulario');
-const btnBuscar = document.getElementById('buscar');
 
 function prufOrigenDestino() {
-    var origen = origen.value;
-    var destino = destino.value;
-
-    if (origen == destino) {
+    if (origen.value === destino.value) {
         alert('Origen y destino NO pueden ser el mismo');
-        destino.value = '1';
+        destino.value = '';
     }
 }
 
 function prufFechas() {
-    var hoy = new Date().toISOString().split('T')[0];
-    
+    const hoy = new Date().toISOString().split('T')[0];
     fechaIni.setAttribute('min', hoy);
 
-    fechaIni.addEventListener('change', function() {
+    fechaIni.addEventListener('change', function () {
         fechaFi.setAttribute('min', fechaIni.value);
     });
 
-    fechaFi.addEventListener('change', function() {
+    fechaFi.addEventListener('change', function () {
         if (fechaFi.value < fechaIni.value) {
             alert('La fecha de fin no puede ser anterior a la fecha de inicio');
             fechaFi.value = '';
@@ -35,28 +30,32 @@ function prufFechas() {
     });
 }
 
+function prufNumeros() {
+    if (numAdultos.value < 0) {
+        alert('El número de adultos no puede ser negativo');
+        numAdultos.value = '';
+    }
+    if (numNiños.value < 0) {
+        alert('El número de niños no puede ser negativo');
+        numNiños.value = '';
+    }
+}
+
 function prufDescuentos() {
-    if (descuentos.value === 'residente') {
-        var origen = origen.value;
-        var destino = destino.value;
+    if (descuentos.value === 'Descuento Residente') {
+        const esValida =
+            (origen.value === 'Palma' && (destino.value === 'Barcelona' || destino.value === 'Madrid')) ||
+            (destino.value === 'Palma' && (origen.value === 'Barcelona' || origen.value === 'Madrid'));
 
-        
-        var esValida =
-            (origen === 'Palma' && (destino === 'Barcelona' || destino === 'Madrid')) ||
-            (destino === 'Palma' && (origen === 'Barcelona' || origen === 'Madrid'));
-
-        if (esValida) {
-            alert('El descuento de residente se aplica correctamente.');
-        } else {
+        if (!esValida) {
             alert('Para aplicar el descuento de residente, el origen debe ser Palma y el destino Madrid o Barcelona (o a la inversa).');
-            descuentos.value = 'sinDescuento'; 
+            descuentos.value = '';
         }
     }
 }
 
 function obtenerInfo(evento) {
-    evento.preventDefault(); // Evitar que el formulario se envie
-    // guardamos en session, pero podria ser local
+    evento.preventDefault(); // Evitar que el formulario se envíe
     sessionStorage.setItem('origen', origen.value);
     sessionStorage.setItem('destino', destino.value);
     sessionStorage.setItem('fechaIni', fechaIni.value);
@@ -66,10 +65,12 @@ function obtenerInfo(evento) {
     sessionStorage.setItem('descuentos', descuentos.value);
 
     window.location.href = '3.11.resultados.html';
-
 }
 
+// Eventos
 destino.addEventListener('change', prufOrigenDestino);
-fechaIni.addEventListener('mouseleave', prufFechas);
+fechaIni.addEventListener('change', prufFechas);
+numAdultos.addEventListener('change', prufNumeros);
+numNiños.addEventListener('change', prufNumeros);
 descuentos.addEventListener('change', prufDescuentos);
-form.addEventListener('submit', obtenerInfo);
+formulario.addEventListener('submit', obtenerInfo);
