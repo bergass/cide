@@ -24,7 +24,7 @@ public class juego extends JPanel implements ActionListener, KeyListener { // de
     private final Timer TIMER; // declara una variable final para el temporizador
     String N1; // declara una variable para el nombre del jugador 1
     String N2; // declara una variable para el nombre del jugador 2
-    private boolean wPressed, sPressed, upPressed, downPressed = false; // declara variables booleanas paralas teclas
+    private boolean wPulsado, sPulsado, upPulsado, downPulsado = false; // declara variables booleanas paralas teclas
                                                                         // presionadas
 
     public juego(String N1, String N2) { // constructor de la clase juego
@@ -45,30 +45,30 @@ public class juego extends JPanel implements ActionListener, KeyListener { // de
 
     @Override
     public void keyPressed(KeyEvent e) { // metodo para manejar eventos de teclado
-        int keyCode = e.getKeyCode(); // obtiene el codigo de la tecla presionada
+        int tecla = e.getKeyCode(); // obtiene el codigo de la tecla presionada
         // Actualizar el estado de las teclas
-        if (keyCode == KeyEvent.VK_W) { // si se presiona la tecla W
-            wPressed = true; // establece la variable wPressed como verdadera
-        } else if (keyCode == KeyEvent.VK_S) { // si se presiona la tecla S
-            sPressed = true; // establece la variable sPressed como verdadera
-        } else if (keyCode == KeyEvent.VK_UP) { // si se presiona la tecla de flecha arriba
-            upPressed = true; // establece la variable upPressed como verdadera
-        } else if (keyCode == KeyEvent.VK_DOWN) { // si se presiona la tecla de flecha abajo
-            downPressed = true; // establece la variable downPressed como verdadera
+        if (tecla == KeyEvent.VK_W) { // si se presiona la tecla W
+            wPulsado = true; // establece la variable wPressed como verdadera
+        } else if (tecla == KeyEvent.VK_S) { // si se presiona la tecla S
+            sPulsado = true; // establece la variable sPressed como verdadera
+        } else if (tecla == KeyEvent.VK_UP) { // si se presiona la tecla de flecha arriba
+            upPulsado = true; // establece la variable upPressed como verdadera
+        } else if (tecla == KeyEvent.VK_DOWN) { // si se presiona la tecla de flecha abajo
+            downPulsado = true; // establece la variable downPressed como verdadera
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) { // metodo para manejar eventos de teclado
-        int keyCode = e.getKeyCode(); // obtiene el codigo de la tecla liberada
-        if (keyCode == KeyEvent.VK_W) { // si se suelta la tecla W
-            wPressed = false; // establece la variable wPressed como falsa
-        } else if (keyCode == KeyEvent.VK_S) { // si se suelta la tecla S
-            sPressed = false; // establece la variable sPressed como falsa
-        } else if (keyCode == KeyEvent.VK_UP) { // si se suelta la tecla de flecha arriba
-            upPressed = false; // establece la variable upPressed como falsa
-        } else if (keyCode == KeyEvent.VK_DOWN) { // si se suelta la tecla de flecha abajo
-            downPressed = false; // establece la variable downPressed como falsa
+        int tecla = e.getKeyCode(); // obtiene el codigo de la tecla liberada
+        if (tecla == KeyEvent.VK_W) { // si se suelta la tecla W
+            wPulsado = false; // establece la variable wPressed como falsa
+        } else if (tecla == KeyEvent.VK_S) { // si se suelta la tecla S
+            sPulsado = false; // establece la variable sPressed como falsa
+        } else if (tecla == KeyEvent.VK_UP) { // si se suelta la tecla de flecha arriba
+            upPulsado = false; // establece la variable upPressed como falsa
+        } else if (tecla == KeyEvent.VK_DOWN) { // si se suelta la tecla de flecha abajo
+            downPulsado = false; // establece la variable downPressed como falsa
         }
     }
 
@@ -113,18 +113,16 @@ public class juego extends JPanel implements ActionListener, KeyListener { // de
 
     @Override
     public void actionPerformed(ActionEvent e) { // metodo para manejar eventos de accion
-        if (wPressed) { // mover la pala izquierda
+        if (wPulsado) { // mover la pala izquierda
             palaI.moverPala(-15, getHeight()); // mueve la pala izquierda hacia arriba
         }
-        if (sPressed) { // mover la pala izquierda
+        if (sPulsado) { // mover la pala izquierda
             palaI.moverPala(15, getHeight()); // mueve la pala izquierda hacia abajo
         }
-
-        // Mover la pala derecha
-        if (upPressed) { // mover la pala derecha
+        if (upPulsado) { // mover la pala derecha
             palaD.moverPala(-15, getHeight()); // mueve la pala derecha hacia arriba
         }
-        if (downPressed) { // mover la pala derecha
+        if (downPulsado) { // mover la pala derecha
             palaD.moverPala(15, getHeight()); // mueve la pala derecha hacia abajo
         }
         pelota.moverPelota(this); // mueve la pelota
