@@ -8,7 +8,7 @@ import javax.swing.JPanel; // importa la clase jpanel para crear paneles
 public class pelota { // define la clase pelota
 
     private int x = 50, y = 50; // coordenadas iniciales del circulo
-    private int dx = 2, dy = 2; // velocidad del movimiento en x e y
+    private int dx = 4, dy = 4; // velocidad del movimiento en x e y
     private final int RADIO = 10; // radio del circulo
     private final int RETRASO = 10; // retraso de la animacion
     private int contador1 = 0; // contador para el jugador 1

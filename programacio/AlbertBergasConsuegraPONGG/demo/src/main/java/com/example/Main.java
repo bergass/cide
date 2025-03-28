@@ -19,6 +19,7 @@ public class Main { // define la clase main
             frame.setSize(800, 500); // define el tamaño de la ventana
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // configura el cierre de la ventana
             frame.setLocationRelativeTo(null); // centra la ventana en la pantalla
+            frame.setResizable(false); // Bloquea el tamaño de la ventana
 
             JPanel menu = new JPanel(new GridBagLayout()); // crea un panel con layout gridbaglayout
             java.awt.GridBagConstraints gbc = new GridBagConstraints(); // crea un objeto gridbagconstraints para manejar las posiciones
@@ -79,6 +80,7 @@ public class Main { // define la clase main
                     juego pong = new juego(nombreJ1, nombreJ2); // crea un nuevo juego con los nombres de los jugadores
                     frame.remove(menu); // elimina el menu de la ventana
                     frame.add(pong); // añade el juego a la ventana
+                    pong.requestFocusInWindow(); // establece el foco en el juego para que funcione
                     frame.revalidate(); // actualiza la ventana (ayudita de chatGPT(no ho hagues tret mai))
                     frame.repaint(); // repinta la ventana
                 }
