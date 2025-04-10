@@ -32,7 +32,7 @@ public class juego extends JPanel implements ActionListener, KeyListener { // de
         this.N1 = N1; // asigna el nombre del jugador 1
         this.N2 = N2; // asigna el nombre del jugador 2
         setBackground(Color.WHITE); // establece el color de fondo del panel
-        pelota = new pelota(); // crea una nueva pelota
+        pelota = new pelota(); // crea una nueva pelota 
         palaI = new pala(); // crea una nueva pala izquierda
         palaD = new pala(); // crea una nueva pala derecha
         setFocusable(true); // establece el panel como enfocable
