@@ -1,4 +1,4 @@
-$elDia = Read-Host "hello, dime un dia de la semana en minuscula please"
+$elDia = Read-Host "Hola, "
 
 switch ($elDia) {
     "lunes"     { Write-Output "Animo bro" }

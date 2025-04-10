@@ -1,0 +1,14 @@
+<viaje>
+    <vuelo_Ida>
+        <origen>Barcelona</origen>
+        <destino>Madrid</destino>
+        <fecha_vuelo>2025-05-15</fecha_vuelo>
+        <precio>120</precio>
+    </vuelo_Ida>
+    <vuelo_Vuelta>
+        <origen>Madrid</origen>
+        <destino>Barcelona</destino>
+        <fecha_vuelo>2025-05-20</fecha_vuelo>
+        <precio>120</precio>
+    </vuelo_Vuelta>
+</viaje>

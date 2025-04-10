@@ -1,2 +1,2 @@
-$name = Read-Host "Cual es tu nombre"
-Write-Output "Hola $name como estas"
+$name = Read-Host "Escriu el teu nom"
+Write-Output "Hola $name com estas"
