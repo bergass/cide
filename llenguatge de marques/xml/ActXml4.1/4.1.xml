@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<curs>
+    <nom>Programacio</nom>
+    <professor>Alberto</professor>
+    <duracio_hores>60</duracio_hores>
+    <preu>99.99</preu>
+        <estudiants>
+            <nom>Maria</nom>
+            <edad>20</edad>
+        </estudiants>
+        <estudiants>
+            <nom>Marc</nom>
+            <edad>21</edad>
+        </estudiants>
+</curs>

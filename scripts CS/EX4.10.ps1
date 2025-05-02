@@ -1,12 +1,12 @@
-$elDia = Read-Host "Hola, "
+$elDia = Read-Host "Hola, dim a quin dia esteim avui"
 
 switch ($elDia) {
-    "lunes"     { Write-Output "Animo bro" }
-    "martes"    { Write-Output "Palmadita en la espalda bro" }
-    "miercoles" { Write-Output "hoy es normalito" }
-    "jueves"    { Write-Output "Ya casi bro" }
-    "viernes"   { Write-Output "Lo lograaaste brooo" }
-    "sabado"    { Write-Output "Torradita chill" }
-    "domingo"   { Write-Output "Aprovecha el ultimo dia..." }
-    default     { Write-Output "Intenta de nuevo" }
+    "lunes"     { Write-Output "Animm!" }
+    "martes"    { Write-Output "Bona sort acaba de començar" }
+    "miercoles" { Write-Output "Mitja part" }
+    "jueves"    { Write-Output "Ja casi, tu pots" }
+    "viernes"   { Write-Output "A sobarla" }
+    "sabado"    { Write-Output "A sobarla x2" }
+    "domingo"   { Write-Output "Paella amb se famili" }
+    default     { Write-Output "Intenta de nou" }
 }

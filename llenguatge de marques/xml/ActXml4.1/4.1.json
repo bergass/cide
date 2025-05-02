@@ -1,0 +1,20 @@
+{
+    "curs": [
+        {
+            "nom": "Programació",
+            "professor": "Alberto",
+            "duracio_hores": 60,
+            "preu": 99.99,
+            "estudiants": [
+                {
+                    "nom": "Maria",
+                    "edad": 20
+                },
+                {
+                    "nom": "Marc",
+                    "edad": 21
+                }
+            ]
+        }
+    ]
+}
